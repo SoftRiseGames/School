@@ -19,7 +19,6 @@ public class Timer : MonoBehaviour
         Time--;
     }
 
-
     private void Update()
     {
         TimeText.text = Time.ToString();

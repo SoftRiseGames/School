@@ -15,12 +15,6 @@ public class MarketingButtons : MonoBehaviour
         ObjectName = this.gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
         ObjectName.text = buttons.marketname;
         this.gameObject.GetComponent<Image>().sprite = buttons.sprite;
-        /*
-         if (PlayerPrefs.HasKey("MoneyAmount"))
-             moneyCurrency.Amount = PlayerPrefs.GetInt("MoneyAmount");
-         else
-             moneyCurrency.Amount = 100;
-        */
     }
     private void Start()
     {
@@ -35,7 +29,6 @@ public class MarketingButtons : MonoBehaviour
    
     public int Money(int money)
     {
-
         moneyCurrency.Amount -= money;
         Debug.Log(moneyCurrency.Amount);
         PlayerPrefs.SetInt("MoneyAmount", moneyCurrency.Amount);
