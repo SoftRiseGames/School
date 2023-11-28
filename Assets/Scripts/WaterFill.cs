@@ -8,10 +8,10 @@ public class WaterFill : MonoBehaviour
     public float waterLevel = 100f;
 
     // The minimum y-position for the water
-    public float minY = -2.75f;
+    public float minY = -2f;
 
     // The maximum y-position for the water
-    public float maxY = 0f;
+    public float maxY = 0.7f;
 
     // The speed at which the water level changes
     public float fillSpeed = 1;
