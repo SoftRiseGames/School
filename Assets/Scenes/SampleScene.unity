@@ -3104,9 +3104,9 @@ GameObject:
   m_Component:
   - component: {fileID: 644135007}
   - component: {fileID: 644135010}
-  - component: {fileID: 644135011}
   - component: {fileID: 644135009}
   - component: {fileID: 644135008}
+  - component: {fileID: 644135011}
   m_Layer: 5
   m_Name: Animal4
   m_TagString: Animal
@@ -3179,9 +3179,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MarketingButtons, Assembly-CSharp
-        m_MethodName: Buy
+      - m_Target: {fileID: 644135011}
+        m_TargetAssemblyTypeName: AnimalSpecials, Assembly-CSharp
+        m_MethodName: JsonSave
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3773,9 +3773,9 @@ GameObject:
   m_Component:
   - component: {fileID: 783941373}
   - component: {fileID: 783941376}
-  - component: {fileID: 783941377}
   - component: {fileID: 783941375}
   - component: {fileID: 783941374}
+  - component: {fileID: 783941377}
   m_Layer: 5
   m_Name: Animal5
   m_TagString: Animal
@@ -3848,9 +3848,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MarketingButtons, Assembly-CSharp
-        m_MethodName: Buy
+      - m_Target: {fileID: 783941377}
+        m_TargetAssemblyTypeName: AnimalSpecials, Assembly-CSharp
+        m_MethodName: JsonSave
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4020,9 +4020,9 @@ GameObject:
   m_Component:
   - component: {fileID: 804512902}
   - component: {fileID: 804512905}
-  - component: {fileID: 804512906}
   - component: {fileID: 804512904}
   - component: {fileID: 804512903}
+  - component: {fileID: 804512906}
   m_Layer: 5
   m_Name: Animal8
   m_TagString: Animal
@@ -4095,9 +4095,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MarketingButtons, Assembly-CSharp
-        m_MethodName: Buy
+      - m_Target: {fileID: 804512906}
+        m_TargetAssemblyTypeName: AnimalSpecials, Assembly-CSharp
+        m_MethodName: JsonSave
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9932,9 +9932,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1145566783}
   - component: {fileID: 1145566787}
-  - component: {fileID: 1145566788}
   - component: {fileID: 1145566786}
   - component: {fileID: 1145566785}
+  - component: {fileID: 1145566788}
   m_Layer: 5
   m_Name: Animal2
   m_TagString: Animal
@@ -10007,9 +10007,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MarketingButtons, Assembly-CSharp
-        m_MethodName: Buy
+      - m_Target: {fileID: 1145566788}
+        m_TargetAssemblyTypeName: AnimalSpecials, Assembly-CSharp
+        m_MethodName: JsonSave
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11174,9 +11174,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1480588861}
   - component: {fileID: 1480588864}
-  - component: {fileID: 1480588865}
   - component: {fileID: 1480588863}
   - component: {fileID: 1480588862}
+  - component: {fileID: 1480588865}
   m_Layer: 5
   m_Name: Animal6
   m_TagString: Animal
@@ -11249,9 +11249,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MarketingButtons, Assembly-CSharp
-        m_MethodName: Buy
+      - m_Target: {fileID: 1480588865}
+        m_TargetAssemblyTypeName: AnimalSpecials, Assembly-CSharp
+        m_MethodName: JsonSave
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12027,9 +12027,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1697548048}
   - component: {fileID: 1697548051}
-  - component: {fileID: 1697548052}
   - component: {fileID: 1697548050}
   - component: {fileID: 1697548049}
+  - component: {fileID: 1697548052}
   m_Layer: 5
   m_Name: Animal3
   m_TagString: Animal
@@ -12102,9 +12102,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MarketingButtons, Assembly-CSharp
-        m_MethodName: Buy
+      - m_Target: {fileID: 1697548052}
+        m_TargetAssemblyTypeName: AnimalSpecials, Assembly-CSharp
+        m_MethodName: JsonSave
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12750,9 +12750,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1963630310}
   - component: {fileID: 1963630313}
-  - component: {fileID: 1963630314}
   - component: {fileID: 1963630312}
   - component: {fileID: 1963630311}
+  - component: {fileID: 1963630314}
   m_Layer: 5
   m_Name: Animal7
   m_TagString: Animal
@@ -12825,9 +12825,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MarketingButtons, Assembly-CSharp
-        m_MethodName: Buy
+      - m_Target: {fileID: 1963630314}
+        m_TargetAssemblyTypeName: AnimalSpecials, Assembly-CSharp
+        m_MethodName: JsonSave
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

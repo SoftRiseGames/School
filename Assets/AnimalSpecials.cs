@@ -8,11 +8,24 @@ public class animals
     public int hungryVariable;
     public int thirstyVariable;
     public bool isIll;
+    
 }
 
 public class AnimalSpecials : MonoBehaviour
 {
     public animals animalclasses = new animals();
+    int indexcounter;
+    private void Start()
+    {
+        if (PlayerPrefs.HasKey("indexcounter"))
+            indexcounter = PlayerPrefs.GetInt("indexcounter");
+        else
+            indexcounter = 0;
+    }
+    private void Update()
+    {
+        indexcounter = PlayerPrefs.GetInt("indexcounter");
+    }
     public void animalStatus()
     {
         int HungryRandomize = Random.Range(1, 101);
@@ -38,8 +51,10 @@ public class AnimalSpecials : MonoBehaviour
     public void JsonSave()
     {
         string jsonstring = JsonUtility.ToJson(animalclasses);
+        indexcounter++;
+        PlayerPrefs.SetInt("indexcounter", indexcounter);
         Debug.Log(jsonstring);
-        File.WriteAllText(Application.dataPath+"/jsonFolders/jsondatas.json", jsonstring);
+        File.WriteAllText(Application.dataPath+"/jsonFolders/jsondata"+indexcounter.ToString()+".json", jsonstring);
     }
 }
 
