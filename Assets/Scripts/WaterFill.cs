@@ -5,7 +5,7 @@ using UnityEngine;
 public class WaterFill : MonoBehaviour
 {
     // Public variable to control the water level (0 to 100)
-    public static float waterLevel = 100f;
+    public float waterLevel = 100f;
 
     // The minimum y-position relative to the parent for the water
     public float minYRelative = -2f;

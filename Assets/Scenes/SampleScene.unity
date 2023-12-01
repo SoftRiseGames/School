@@ -1723,7 +1723,6 @@ GameObject:
   m_Component:
   - component: {fileID: 346508981}
   - component: {fileID: 346508980}
-  - component: {fileID: 346508982}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -1753,7 +1752,7 @@ MonoBehaviour:
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 34
-    OrthographicSize: 9.5
+    OrthographicSize: 10
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -1785,18 +1784,6 @@ Transform:
   m_Father: {fileID: 1812591680}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &346508982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 346508979}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4d190fff724fb648b0e4b58f5c8d881, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &363577277
 GameObject:
   m_ObjectHideFlags: 0
@@ -2298,7 +2285,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 9.5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4338,9 +4325,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d130580b387b0f34f99a6c354704642c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waterLevel: 100
   minYRelative: -2
   maxYRelative: 0
-  fillSpeed: 5
+  fillSpeed: 2
 --- !u!212 &838177466
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6292,6 +6280,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 37122bee90dd91447af114d5cb2f3f07, type: 3}
   - {fileID: 21300000, guid: 8a4962d90b63f004eadfbcca5a752fc2, type: 3}
   foodAudioClips: []
+  foodLevel: 100
 --- !u!1 &1480588860
 GameObject:
   m_ObjectHideFlags: 0
