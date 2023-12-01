@@ -6,7 +6,7 @@ public class FoodFill : MonoBehaviour
 {
     public Sprite[] foodSprites; // Array to hold your 4 sprites
     public AudioClip[] foodAudioClips; // Array to hold your 4 audio clips
-    public float foodLevel = 100f; // Initial value for food
+    public static float foodLevel = 100f; // Initial value for food
 
     private SpriteRenderer spriteRenderer;
     private AudioSource audioSource;
@@ -39,7 +39,7 @@ public class FoodFill : MonoBehaviour
             spriteRenderer.sprite = foodSprites[1]; // Use the sprite for 75 to 50
             PlayFoodAudioClip(1);
         }
-        else if (foodLevel > 25f)
+        else if (foodLevel > 1f)
         {
             spriteRenderer.sprite = foodSprites[2]; // Use the sprite for 50 to 25
             PlayFoodAudioClip(2);

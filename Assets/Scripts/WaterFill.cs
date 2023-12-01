@@ -5,13 +5,13 @@ using UnityEngine;
 public class WaterFill : MonoBehaviour
 {
     // Public variable to control the water level (0 to 100)
-    public float waterLevel = 100f;
+    public static float waterLevel = 100f;
 
-    // The minimum y-position for the water
-    public float minY = -2f;
+    // The minimum y-position relative to the parent for the water
+    public float minYRelative = -2f;
 
-    // The maximum y-position for the water
-    public float maxY = 0.7f;
+    // The maximum y-position relative to the parent for the water
+    public float maxYRelative = 0.7f;
 
     // The speed at which the water level changes
     public float fillSpeed = 1;
@@ -31,13 +31,12 @@ public class WaterFill : MonoBehaviour
         waterLevel = Mathf.Clamp(waterLevel, 0f, 100f);
 
         // Calculate the target y-position based on the water level
-        float targetY = Mathf.Lerp(minY, maxY, waterLevel / 100f);
+        float targetY = Mathf.Lerp(minYRelative, maxYRelative, waterLevel / 100f);
 
         // Move the water towards the target position
-        float newY = Mathf.MoveTowards(transform.position.y, targetY, fillSpeed * Time.deltaTime);
+        float newY = Mathf.MoveTowards(transform.localPosition.y, targetY, fillSpeed * Time.deltaTime);
 
-        // Update the position of the water GameObject
-        transform.position = new Vector3(transform.position.x, newY, transform.position.z);
-
+        // Update the local position of the water GameObject
+        transform.localPosition = new Vector3(transform.localPosition.x, newY, transform.localPosition.z);
     }
 }
