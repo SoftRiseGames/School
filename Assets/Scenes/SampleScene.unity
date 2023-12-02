@@ -1071,6 +1071,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf5b7785a05da042b9acf9bbf5acb28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animalclasses:
+    hungryVariable: 0
+    thirstyVariable: 0
+    isIll: 0
 --- !u!1 &129191837
 GameObject:
   m_ObjectHideFlags: 0
@@ -3226,6 +3230,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf5b7785a05da042b9acf9bbf5acb28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animalclasses:
+    hungryVariable: 0
+    thirstyVariable: 0
+    isIll: 0
 --- !u!1 &644637196
 GameObject:
   m_ObjectHideFlags: 0
@@ -3895,6 +3903,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf5b7785a05da042b9acf9bbf5acb28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animalclasses:
+    hungryVariable: 0
+    thirstyVariable: 0
+    isIll: 0
 --- !u!1 &791096937
 GameObject:
   m_ObjectHideFlags: 0
@@ -4142,6 +4154,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf5b7785a05da042b9acf9bbf5acb28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animalclasses:
+    hungryVariable: 0
+    thirstyVariable: 0
+    isIll: 0
 --- !u!1 &812444724
 GameObject:
   m_ObjectHideFlags: 0
@@ -4601,6 +4617,21 @@ MonoBehaviour:
   clothes: {fileID: 590309443}
   pants: {fileID: 980641620}
   humanData:
+  - face:
+    - {fileID: -9095717837082945937, guid: 48b55e5633142ce4ca9e502fba55cc6c, type: 3}
+    - {fileID: -2413806693520163455, guid: 082340bc1f09015459788c29bc9e74be, type: 3}
+    - {fileID: 3625043607559282579, guid: c3f0d4a53a5fe1b49b4dcbd6b9cee340, type: 3}
+    - {fileID: 7482667652216324306, guid: 90164095fbef60f47b3d3d02a83fa6f5, type: 3}
+    clothes:
+    - {fileID: -9095717837082945937, guid: 354979f8ceb8306429c2e5e8c9a41e00, type: 3}
+    - {fileID: -2413806693520163455, guid: 9ede3e332c47d0e44b9d833865077eb8, type: 3}
+    - {fileID: 3625043607559282579, guid: e58076cb9ae16a2428213681d62f0265, type: 3}
+    - {fileID: 7482667652216324306, guid: 8bfe908b716e25b4692c5a46b720c88f, type: 3}
+    pants:
+    - {fileID: -9095717837082945937, guid: bd9e495cfa0977f45878df7b8670b92f, type: 3}
+    - {fileID: -2413806693520163455, guid: 483eb1a13eb13d14c95d20d77d1edd86, type: 3}
+    - {fileID: 3625043607559282579, guid: 9ad2988ab5d73e64e816411e64f87e2f, type: 3}
+    - {fileID: 7482667652216324306, guid: e9d5d62c3518810408cd2da79a71d24c, type: 3}
   - face:
     - {fileID: -9095717837082945937, guid: 48b55e5633142ce4ca9e502fba55cc6c, type: 3}
     - {fileID: -2413806693520163455, guid: 082340bc1f09015459788c29bc9e74be, type: 3}
@@ -5184,6 +5215,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf5b7785a05da042b9acf9bbf5acb28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animalclasses:
+    hungryVariable: 0
+    thirstyVariable: 0
+    isIll: 0
 --- !u!1 &1161377994
 GameObject:
   m_ObjectHideFlags: 0
@@ -6428,6 +6463,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf5b7785a05da042b9acf9bbf5acb28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animalclasses:
+    hungryVariable: 0
+    thirstyVariable: 0
+    isIll: 0
 --- !u!1 &1531328562
 GameObject:
   m_ObjectHideFlags: 0
@@ -7281,6 +7320,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf5b7785a05da042b9acf9bbf5acb28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animalclasses:
+    hungryVariable: 0
+    thirstyVariable: 0
+    isIll: 0
 --- !u!1 &1735455506
 GameObject:
   m_ObjectHideFlags: 0
@@ -8003,6 +8046,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf5b7785a05da042b9acf9bbf5acb28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animalclasses:
+    hungryVariable: 0
+    thirstyVariable: 0
+    isIll: 0
 --- !u!1 &2040692666
 GameObject:
   m_ObjectHideFlags: 0

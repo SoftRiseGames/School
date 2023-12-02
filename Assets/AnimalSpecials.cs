@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
+[System.Serializable]
 public class animals
 {
     public int hungryVariable;
@@ -54,7 +55,7 @@ public class AnimalSpecials : MonoBehaviour
         indexcounter++;
         PlayerPrefs.SetInt("indexcounter", indexcounter);
         Debug.Log(jsonstring);
-        File.WriteAllText(Application.dataPath+"/jsonFolders/jsondata"+indexcounter.ToString()+".json", jsonstring);
+        File.WriteAllText(Application.dataPath+"/Resources/JsonFolder/jsondata"+indexcounter.ToString()+".json", jsonstring);
     }
 }
 
