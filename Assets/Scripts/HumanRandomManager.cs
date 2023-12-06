@@ -12,18 +12,16 @@ public class Data
     public List<Sprite> clothes;
     public List<Sprite> pants;
 }
+[System.Serializable]
+
 
 public class HumanRandomManager : MonoBehaviour   
 {
-
-    [SerializeField] GameObject face;
-    [SerializeField] GameObject clothes;
-    [SerializeField] GameObject pants;
-  
-
     public List<Data> humanData;
     
-   
+    public Sprite face;
+    public Sprite clothes;
+    public Sprite pants;
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.R))
@@ -31,17 +29,7 @@ public class HumanRandomManager : MonoBehaviour
     }
     void Wave()
     {
-        int selectedRandomIndex = Random.Range(0, humanData.Count);
-        WaveSystem(humanData[selectedRandomIndex]);
         
     }
-    void WaveSystem(Data data)
-    {
-        int faceRandom = Random.Range(0, data.face.Count);
-        face.GetComponent<SpriteRenderer>().sprite = data.face[faceRandom];
-        int clothesrandom = Random.Range(0, data.clothes.Count);
-        clothes.GetComponent<SpriteRenderer>().sprite = data.clothes[clothesrandom];
-        int pantsrandom = Random.Range(0, data.pants.Count);
-        pants.GetComponent<SpriteRenderer>().sprite = data.pants[pantsrandom];
-    }
+   
 }

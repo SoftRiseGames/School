@@ -9,7 +9,6 @@ public class AnimalData
     public int hungryVariable;
     public int thirstyVariable;
     public bool isIll;
-    
 }
 
 public class AnimalSpecials : MonoBehaviour
