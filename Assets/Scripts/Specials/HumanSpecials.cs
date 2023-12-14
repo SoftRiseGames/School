@@ -4,9 +4,10 @@ using UnityEngine;
 using System.IO;
 public class Humans
 {
-    public string face;
-    public string Clothe;
-    public string Pant;
+    public int HumanType;
+    public int faceIndex;
+    public int ClotheIndex;
+    public int PantIndex;
 
 }
 public class HumanSpecials : MonoBehaviour
@@ -16,37 +17,32 @@ public class HumanSpecials : MonoBehaviour
     public int indexcounter;
 
     [SerializeField] Sprite face;
-    [SerializeField] Sprite Clothe;
-    [SerializeField] Sprite Pant;
+    
     void Start()
     {
         wave();
     }
-
-
-    void Update()
-    {
-        
-    }
-   
-    void WaveSystem(Humans humandata,Data data)
+    void WaveSystem(Data data)
     {
         int faceRandom = Random.Range(0, data.face.Count);
         face = data.face[faceRandom];
+        human.faceIndex = faceRandom;
         int clothesrandom = Random.Range(0, data.clothes.Count);
-        Clothe = data.clothes[clothesrandom];
+        human.ClotheIndex = clothesrandom;
         int pantsrandom = Random.Range(0, data.pants.Count);
-        Pant = data.pants[pantsrandom];
+        human.PantIndex = pantsrandom;
     }
     void wave()
     {
         int selectedRandomIndex = Random.Range(0, randomizerList.humanData.Count);
-        WaveSystem(human,randomizerList.humanData[selectedRandomIndex]);
+        human.HumanType = selectedRandomIndex;
+        WaveSystem(randomizerList.humanData[selectedRandomIndex]);
     }
     public void HumanJsonSave()
     {
         string sprite = JsonUtility.ToJson(human);
         indexcounter++;
+        PlayerPrefs.SetInt("humanCount", indexcounter);
         File.WriteAllText(Application.dataPath + "/JsonHumanFolder/jsondata" + indexcounter.ToString() + ".json", sprite);
     }
 }

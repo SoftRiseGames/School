@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class ScreenSystem : MonoBehaviour
 {
     public CinemachineVirtualCamera MainCam;
@@ -33,6 +34,12 @@ public class ScreenSystem : MonoBehaviour
         {
             Sites[i].GetComponent<Button>().interactable = true;
         }
+
+    }
+    private void Update()
+    {
+        if(Input.GetKey(KeyCode.X))
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
     }
     void DeInteractive()

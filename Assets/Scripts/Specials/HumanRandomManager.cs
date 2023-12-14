@@ -12,24 +12,7 @@ public class Data
     public List<Sprite> clothes;
     public List<Sprite> pants;
 }
-[System.Serializable]
-
-
 public class HumanRandomManager : MonoBehaviour   
 {
     public List<Data> humanData;
-    
-    public Sprite face;
-    public Sprite clothes;
-    public Sprite pants;
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.R))
-            Wave();
-    }
-    void Wave()
-    {
-        
-    }
-   
 }
