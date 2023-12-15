@@ -29,7 +29,8 @@ public class AnimalSpecials : MonoBehaviour
     }
     private void Update()
     {
-        indexcounter = PlayerPrefs.GetInt("indexcounter");
+        if (PlayerPrefs.HasKey("indexcounter"))
+            indexcounter = PlayerPrefs.GetInt("indexcounter");
     }
     public void animalStatus()
     {
