@@ -29,21 +29,30 @@ public class HumanLister : MonoBehaviour
     }
     public void Generate()
     {
-        Humans data = JsonUtility.FromJson<Humans>(textStr[0].ToString());
-        face.GetComponent<SpriteRenderer>().sprite = randomManager.humanData[data.HumanType].face[data.faceIndex];
-        Clothe.GetComponent<SpriteRenderer>().sprite = randomManager.humanData[data.HumanType].face[data.ClotheIndex];
-        pant.GetComponent<SpriteRenderer>().sprite = randomManager.humanData[data.HumanType].face[data.PantIndex];
+        if (ControlInteger < textStr.Length-1)
+        {
+            ControlInteger = ControlInteger + 1;
+            Humans data = JsonUtility.FromJson<Humans>(textStr[ControlInteger].ToString());
+            face.GetComponent<SpriteRenderer>().sprite = randomManager.humanData[data.HumanType].face[data.faceIndex];
+            Clothe.GetComponent<SpriteRenderer>().sprite = randomManager.humanData[data.HumanType].face[data.ClotheIndex];
+            pant.GetComponent<SpriteRenderer>().sprite = randomManager.humanData[data.HumanType].face[data.PantIndex];
+        }
+        
     }
     private void Update()
     {
-        if (Input.GetKey(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R))
             Generate();
+
+        //
+
+
     }
     public void LoadJsonFiles(string folderPath)
     {
         try
         {
-            // Check if the specified directory exists
+           
             if (Directory.Exists(folderPath))
             {
                 // Search for JSON files within the directory and its subdirectories
