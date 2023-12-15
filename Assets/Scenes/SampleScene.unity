@@ -2185,8 +2185,6 @@ MonoBehaviour:
   randomizerList: {fileID: 973459702}
   indexcounter: 0
   face: {fileID: 0}
-  Clothe: {fileID: 0}
-  Pant: {fileID: 0}
 --- !u!1 &346508979
 GameObject:
   m_ObjectHideFlags: 0
@@ -3885,8 +3883,6 @@ MonoBehaviour:
   randomizerList: {fileID: 973459702}
   indexcounter: 0
   face: {fileID: 0}
-  Clothe: {fileID: 0}
-  Pant: {fileID: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -4285,8 +4281,6 @@ MonoBehaviour:
   randomizerList: {fileID: 973459702}
   indexcounter: 0
   face: {fileID: 0}
-  Clothe: {fileID: 0}
-  Pant: {fileID: 0}
 --- !u!1 &644135006
 GameObject:
   m_ObjectHideFlags: 0
@@ -6104,8 +6098,6 @@ MonoBehaviour:
   randomizerList: {fileID: 973459702}
   indexcounter: 0
   face: {fileID: 0}
-  Clothe: {fileID: 0}
-  Pant: {fileID: 0}
 --- !u!1 &934850845
 GameObject:
   m_ObjectHideFlags: 0
@@ -6191,7 +6183,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1932781087}
+      - m_Target: {fileID: 934850851}
         m_TargetAssemblyTypeName: HumanSpecials, Assembly-CSharp
         m_MethodName: HumanJsonSave
         m_Mode: 1
@@ -6256,8 +6248,6 @@ MonoBehaviour:
   randomizerList: {fileID: 973459702}
   indexcounter: 0
   face: {fileID: 0}
-  Clothe: {fileID: 0}
-  Pant: {fileID: 0}
 --- !u!114 &973459702 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3637803959085943219, guid: d9ec1ad96c2669b4184390a96ce0bfcf, type: 3}
@@ -7484,8 +7474,6 @@ MonoBehaviour:
   randomizerList: {fileID: 973459702}
   indexcounter: 0
   face: {fileID: 0}
-  Clothe: {fileID: 0}
-  Pant: {fileID: 0}
 --- !u!1 &1306050232
 GameObject:
   m_ObjectHideFlags: 0
@@ -8957,7 +8945,6 @@ MonoBehaviour:
   - {fileID: 1963630309}
   - {fileID: 804512901}
   onOpenButtons: 0
-  AnimalCounts: {fileID: 0}
 --- !u!1 &1578709726
 GameObject:
   m_ObjectHideFlags: 3
@@ -10162,8 +10149,6 @@ MonoBehaviour:
   randomizerList: {fileID: 973459702}
   indexcounter: 0
   face: {fileID: 0}
-  Clothe: {fileID: 0}
-  Pant: {fileID: 0}
 --- !u!1 &1939081465
 GameObject:
   m_ObjectHideFlags: 0
@@ -10895,7 +10880,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1932781087}
+      - m_Target: {fileID: 2125976938}
         m_TargetAssemblyTypeName: HumanSpecials, Assembly-CSharp
         m_MethodName: HumanJsonSave
         m_Mode: 1
@@ -10960,8 +10945,6 @@ MonoBehaviour:
   randomizerList: {fileID: 973459702}
   indexcounter: 0
   face: {fileID: 0}
-  Clothe: {fileID: 0}
-  Pant: {fileID: 0}
 --- !u!1001 &3637803959992064325
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11017,5 +11000,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: RandomManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3637803959085943219, guid: d9ec1ad96c2669b4184390a96ce0bfcf, type: 3}
+      propertyPath: humanData.Array.data[0].face.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3637803959085943219, guid: d9ec1ad96c2669b4184390a96ce0bfcf, type: 3}
+      propertyPath: humanData.Array.data[0].face.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: daf2ab606d4db0d4f9ecf4c02137d2a8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9ec1ad96c2669b4184390a96ce0bfcf, type: 3}

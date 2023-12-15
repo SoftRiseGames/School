@@ -47,10 +47,10 @@ MonoBehaviour:
   humanData:
   - face:
     - {fileID: 21300000, guid: daf2ab606d4db0d4f9ecf4c02137d2a8, type: 3}
+    - {fileID: 21300000, guid: 9125c204f566db048a92ebcb64d9d14a, type: 3}
     clothes:
     - {fileID: 21300000, guid: cee9dbe90b270c944ae1dabf41c93b10, type: 3}
+    - {fileID: 21300000, guid: 9125c204f566db048a92ebcb64d9d14a, type: 3}
     pants:
     - {fileID: 21300000, guid: dcea51d6065d64246aeec467afeff684, type: 3}
-  face: {fileID: 0}
-  clothes: {fileID: 0}
-  pants: {fileID: 0}
+    - {fileID: 21300000, guid: 9125c204f566db048a92ebcb64d9d14a, type: 3}

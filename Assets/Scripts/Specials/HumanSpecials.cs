@@ -38,6 +38,12 @@ public class HumanSpecials : MonoBehaviour
         human.HumanType = selectedRandomIndex;
         WaveSystem(randomizerList.humanData[selectedRandomIndex]);
     }
+    private void Update()
+    {
+        if(PlayerPrefs.HasKey("humanCount"))
+            indexcounter = PlayerPrefs.GetInt("humanCount"); 
+
+    }
     public void HumanJsonSave()
     {
         string sprite = JsonUtility.ToJson(human);

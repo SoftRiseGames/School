@@ -20,10 +20,12 @@ public class AnimalSpecials : MonoBehaviour
     [SerializeField] int ChanceToThirstySpeed;
     private void Start()
     {
+        /*
         if (PlayerPrefs.HasKey("indexcounter"))
             indexcounter = PlayerPrefs.GetInt("indexcounter");
         else
             indexcounter = 0;
+        */
     }
     private void Update()
     {
