@@ -23,7 +23,10 @@ public class HumanSpecials : MonoBehaviour
     
     void Start()
     {
+        /*
         wave();
+        
+        */
     }
     void WaveSystem(Data data)
     {
@@ -41,17 +44,27 @@ public class HumanSpecials : MonoBehaviour
         int noseRandom = Random.Range(0, data.nose.Count);
         human.noseIndex = noseRandom;
     }
-    void wave()
+    public void wave()
     {
         int selectedRandomIndex = Random.Range(0, randomizerList.humanData.Count);
         human.HumanType = selectedRandomIndex;
         WaveSystem(randomizerList.humanData[selectedRandomIndex]);
+        iconMaker(randomizerList.humanData[human.HumanType]);
     }
     private void Update()
     {
         if(PlayerPrefs.HasKey("humanCount"))
             indexcounter = PlayerPrefs.GetInt("humanCount"); 
 
+    }
+    public void iconMaker(Data data)
+    {
+        this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = data.body[human.bodyIndex];
+        this.gameObject.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = data.clothes[human.clotheIndex];
+        this.gameObject.transform.GetChild(3).GetComponent<SpriteRenderer>().sprite = data.eyes[human.eyesIndex];
+        this.gameObject.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = data.hair[human.hairIndex];
+        this.gameObject.transform.GetChild(5).GetComponent<SpriteRenderer>().sprite = data.mouth[human.mouthIndex];
+        this.gameObject.transform.GetChild(6).GetComponent<SpriteRenderer>().sprite = data.nose[human.noseIndex];
     }
     public void HumanJsonSave()
     {

@@ -8,10 +8,11 @@ public class Timer : MonoBehaviour
     int Time = 10;
     public TextMeshProUGUI TimeText;
     public AnimalGenerator animalGenerator;
-    
+    public HumanButtonManagement humangenerator;
     void Start()
     {
         animalGenerator.Generate();
+        humangenerator.Generate();
         InvokeRepeating("DecreaseTimer", 1, 1);
     }
 
@@ -27,9 +28,16 @@ public class Timer : MonoBehaviour
         {
             button.GetComponent<Button>().interactable = true;
         }
+        foreach(GameObject button in humangenerator.buttons)
+        {
+            button.GetComponent<Button>().interactable = true;
+        }
         animalGenerator.Generate();
+        humangenerator.Generate();
         Time = 10;
     }
+
+
     public void DecreaseTimer()
     {
         Time--;
