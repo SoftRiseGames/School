@@ -11,9 +11,12 @@ public class HumanLister : MonoBehaviour
 
     public Humans human;
     
-    [SerializeField] GameObject face;
-    [SerializeField] GameObject Clothe;
-    [SerializeField] GameObject pant;
+    [SerializeField] GameObject body;
+    [SerializeField] GameObject Clothes;
+    [SerializeField] GameObject eyes;
+    [SerializeField] GameObject hair;
+    [SerializeField] GameObject mouth;
+    [SerializeField] GameObject nose;
     [SerializeField] int ControlInteger;
     public string[] textStr;
     public HumanRandomManager randomManager;
@@ -33,9 +36,12 @@ public class HumanLister : MonoBehaviour
         {
             ControlInteger = ControlInteger + 1;
             Humans data = JsonUtility.FromJson<Humans>(textStr[ControlInteger].ToString());
-            face.GetComponent<SpriteRenderer>().sprite = randomManager.humanData[data.HumanType].face[data.faceIndex];
-            Clothe.GetComponent<SpriteRenderer>().sprite = randomManager.humanData[data.HumanType].face[data.ClotheIndex];
-            pant.GetComponent<SpriteRenderer>().sprite = randomManager.humanData[data.HumanType].face[data.PantIndex];
+            body.GetComponent<SpriteRenderer>().sprite = randomManager.humanData[data.HumanType].body[data.bodyIndex];
+            Clothes.GetComponent<SpriteRenderer>().sprite = randomManager.humanData[data.HumanType].clothes[data.clotheIndex];
+            eyes.GetComponent<SpriteRenderer>().sprite = randomManager.humanData[data.HumanType].eyes[data.eyesIndex];
+            hair.GetComponent<SpriteRenderer>().sprite = randomManager.humanData[data.HumanType].hair[data.hairIndex];
+            mouth.GetComponent<SpriteRenderer>().sprite = randomManager.humanData[data.HumanType].mouth[data.mouthIndex];
+            nose.GetComponent<SpriteRenderer>().sprite = randomManager.humanData[data.HumanType].nose[data.noseIndex];
         }
         
     }

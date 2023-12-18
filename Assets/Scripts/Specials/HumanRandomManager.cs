@@ -8,9 +8,12 @@ using System.Linq;
 [System.Serializable]
 public class Data
 {
-    public List<Sprite> face;
+    public List<Sprite> body;
     public List<Sprite> clothes;
-    public List<Sprite> pants;
+    public List<Sprite> eyes;
+    public List<Sprite> hair;
+    public List<Sprite> mouth;
+    public List<Sprite> nose;
 }
 public class HumanRandomManager : MonoBehaviour   
 {

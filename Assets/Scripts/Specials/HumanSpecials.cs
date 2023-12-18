@@ -5,9 +5,12 @@ using System.IO;
 public class Humans
 {
     public int HumanType;
-    public int faceIndex;
-    public int ClotheIndex;
-    public int PantIndex;
+    public int bodyIndex;
+    public int clotheIndex;
+    public int eyesIndex;
+    public int hairIndex;
+    public int mouthIndex;
+    public int noseIndex;
 
 }
 public class HumanSpecials : MonoBehaviour
@@ -24,13 +27,19 @@ public class HumanSpecials : MonoBehaviour
     }
     void WaveSystem(Data data)
     {
-        int faceRandom = Random.Range(0, data.face.Count);
-        face = data.face[faceRandom];
-        human.faceIndex = faceRandom;
+        int bodyRandom = Random.Range(0, data.body.Count);
+        face = data.body[bodyRandom];
+        human.bodyIndex = bodyRandom;
         int clothesrandom = Random.Range(0, data.clothes.Count);
-        human.ClotheIndex = clothesrandom;
-        int pantsrandom = Random.Range(0, data.pants.Count);
-        human.PantIndex = pantsrandom;
+        human.clotheIndex = clothesrandom;
+        int eyesRandom = Random.Range(0, data.eyes.Count);
+        human.eyesIndex = eyesRandom;
+        int hairRandom = Random.Range(0, data.hair.Count);
+        human.hairIndex = hairRandom;
+        int mouthRandom = Random.Range(0, data.mouth.Count);
+        human.mouthIndex = mouthRandom;
+        int noseRandom = Random.Range(0, data.nose.Count);
+        human.noseIndex = noseRandom;
     }
     void wave()
     {
