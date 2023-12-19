@@ -930,7 +930,7 @@ GameObject:
   - component: {fileID: 87215142}
   - component: {fileID: 87215141}
   m_Layer: 5
-  m_Name: AnimalShop
+  m_Name: AnimalControl
   m_TagString: OutMenuButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1077,7 +1077,7 @@ GameObject:
   - component: {fileID: 112984375}
   - component: {fileID: 112984373}
   m_Layer: 0
-  m_Name: AnimalShop
+  m_Name: AnimalControl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1333,16 +1333,15 @@ GameObject:
   m_Component:
   - component: {fileID: 126044649}
   - component: {fileID: 126044653}
-  - component: {fileID: 126044652}
-  - component: {fileID: 126044651}
   - component: {fileID: 126044654}
+  - component: {fileID: 126044652}
   m_Layer: 5
   m_Name: Animal1
   m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &126044649
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1364,62 +1363,6 @@ RectTransform:
   m_AnchoredPosition: {x: -3.6424866, y: 6.549774}
   m_SizeDelta: {x: 1.0305, y: 0.836}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &126044651
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 126044648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 126044652}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 126044654}
-        m_TargetAssemblyTypeName: AnimalSpecials, Assembly-CSharp
-        m_MethodName: JsonSave
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &126044652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1467,16 +1410,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 126044648}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cf5b7785a05da042b9acf9bbf5acb28, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a4d6b7e05696a14e97d3e38b14fb706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animalclasses:
+  animalData:
     hungryVariable: 0
     thirstyVariable: 0
     isIll: 0
-  ChanceToIll: 10
-  ChanceToHungrySpeed: 30
-  ChanceToThirstySpeed: 20
 --- !u!1 &129191837
 GameObject:
   m_ObjectHideFlags: 0
@@ -3352,7 +3292,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeText: {fileID: 711917070}
-  animalGenerator: {fileID: 1557359291}
   humangenerator: {fileID: 114801203}
 --- !u!4 &371501583
 Transform:
@@ -5923,16 +5862,15 @@ GameObject:
   m_Component:
   - component: {fileID: 644135007}
   - component: {fileID: 644135010}
-  - component: {fileID: 644135009}
-  - component: {fileID: 644135008}
   - component: {fileID: 644135011}
+  - component: {fileID: 644135009}
   m_Layer: 5
   m_Name: Animal4
   m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &644135007
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5954,62 +5892,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.44, y: 6.549774}
   m_SizeDelta: {x: 1.0305, y: 0.836}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &644135008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 644135006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 644135009}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 644135011}
-        m_TargetAssemblyTypeName: AnimalSpecials, Assembly-CSharp
-        m_MethodName: JsonSave
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &644135009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6057,16 +5939,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 644135006}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cf5b7785a05da042b9acf9bbf5acb28, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a4d6b7e05696a14e97d3e38b14fb706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animalclasses:
+  animalData:
     hungryVariable: 0
     thirstyVariable: 0
     isIll: 0
-  ChanceToIll: 10
-  ChanceToHungrySpeed: 30
-  ChanceToThirstySpeed: 20
 --- !u!1 &644637196
 GameObject:
   m_ObjectHideFlags: 0
@@ -6768,16 +6647,15 @@ GameObject:
   m_Component:
   - component: {fileID: 783941373}
   - component: {fileID: 783941376}
-  - component: {fileID: 783941375}
-  - component: {fileID: 783941374}
   - component: {fileID: 783941377}
+  - component: {fileID: 783941375}
   m_Layer: 5
   m_Name: Animal5
   m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &783941373
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6799,62 +6677,6 @@ RectTransform:
   m_AnchoredPosition: {x: -3.66, y: 4.65}
   m_SizeDelta: {x: 1.0305, y: 0.836}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &783941374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 783941372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 783941375}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 783941377}
-        m_TargetAssemblyTypeName: AnimalSpecials, Assembly-CSharp
-        m_MethodName: JsonSave
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &783941375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6902,16 +6724,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 783941372}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cf5b7785a05da042b9acf9bbf5acb28, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a4d6b7e05696a14e97d3e38b14fb706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animalclasses:
+  animalData:
     hungryVariable: 0
     thirstyVariable: 0
     isIll: 0
-  ChanceToIll: 10
-  ChanceToHungrySpeed: 30
-  ChanceToThirstySpeed: 20
 --- !u!1 &804512901
 GameObject:
   m_ObjectHideFlags: 0
@@ -6922,16 +6741,15 @@ GameObject:
   m_Component:
   - component: {fileID: 804512902}
   - component: {fileID: 804512905}
-  - component: {fileID: 804512904}
-  - component: {fileID: 804512903}
   - component: {fileID: 804512906}
+  - component: {fileID: 804512904}
   m_Layer: 5
   m_Name: Animal8
   m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &804512902
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6953,62 +6771,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.4, y: 4.65}
   m_SizeDelta: {x: 1.0305, y: 0.836}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &804512903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 804512901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 804512904}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 804512906}
-        m_TargetAssemblyTypeName: AnimalSpecials, Assembly-CSharp
-        m_MethodName: JsonSave
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &804512904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7056,16 +6818,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 804512901}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cf5b7785a05da042b9acf9bbf5acb28, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a4d6b7e05696a14e97d3e38b14fb706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animalclasses:
+  animalData:
     hungryVariable: 0
     thirstyVariable: 0
     isIll: 0
-  ChanceToIll: 10
-  ChanceToHungrySpeed: 30
-  ChanceToThirstySpeed: 20
 --- !u!1 &812444724
 GameObject:
   m_ObjectHideFlags: 0
@@ -9283,16 +9042,15 @@ GameObject:
   m_Component:
   - component: {fileID: 1145566783}
   - component: {fileID: 1145566787}
-  - component: {fileID: 1145566786}
-  - component: {fileID: 1145566785}
   - component: {fileID: 1145566788}
+  - component: {fileID: 1145566786}
   m_Layer: 5
   m_Name: Animal2
   m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1145566783
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9314,62 +9072,6 @@ RectTransform:
   m_AnchoredPosition: {x: -2.2268372, y: 6.549774}
   m_SizeDelta: {x: 1.0305, y: 0.836}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1145566785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1145566782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1145566786}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1145566788}
-        m_TargetAssemblyTypeName: AnimalSpecials, Assembly-CSharp
-        m_MethodName: JsonSave
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1145566786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9417,16 +9119,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1145566782}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cf5b7785a05da042b9acf9bbf5acb28, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a4d6b7e05696a14e97d3e38b14fb706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animalclasses:
+  animalData:
     hungryVariable: 0
     thirstyVariable: 0
     isIll: 0
-  ChanceToIll: 10
-  ChanceToHungrySpeed: 30
-  ChanceToThirstySpeed: 20
 --- !u!1 &1161377994
 GameObject:
   m_ObjectHideFlags: 0
@@ -11627,16 +11326,15 @@ GameObject:
   m_Component:
   - component: {fileID: 1480588861}
   - component: {fileID: 1480588864}
-  - component: {fileID: 1480588863}
-  - component: {fileID: 1480588862}
   - component: {fileID: 1480588865}
+  - component: {fileID: 1480588863}
   m_Layer: 5
   m_Name: Animal6
   m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1480588861
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11658,62 +11356,6 @@ RectTransform:
   m_AnchoredPosition: {x: -2.21, y: 4.65}
   m_SizeDelta: {x: 1.0305, y: 0.836}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1480588862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1480588860}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1480588863}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1480588865}
-        m_TargetAssemblyTypeName: AnimalSpecials, Assembly-CSharp
-        m_MethodName: JsonSave
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1480588863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11761,16 +11403,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1480588860}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cf5b7785a05da042b9acf9bbf5acb28, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a4d6b7e05696a14e97d3e38b14fb706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animalclasses:
+  animalData:
     hungryVariable: 0
     thirstyVariable: 0
     isIll: 0
-  ChanceToIll: 10
-  ChanceToHungrySpeed: 30
-  ChanceToThirstySpeed: 20
 --- !u!1 &1531328562
 GameObject:
   m_ObjectHideFlags: 0
@@ -12203,10 +11842,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1557359289}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21905ce1966fed14595e52788b8e4a5a, type: 3}
+  m_Script: {fileID: 11500000, guid: e670a047afb2a8f4aa3a5636c910ccfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttons:
+  customer:
   - {fileID: 126044648}
   - {fileID: 1145566782}
   - {fileID: 1697548047}
@@ -12215,7 +11854,7 @@ MonoBehaviour:
   - {fileID: 1480588860}
   - {fileID: 1963630309}
   - {fileID: 804512901}
-  onOpenButtons: 0
+  textStr: []
 --- !u!1 &1578709726
 GameObject:
   m_ObjectHideFlags: 3
@@ -12719,16 +12358,15 @@ GameObject:
   m_Component:
   - component: {fileID: 1697548048}
   - component: {fileID: 1697548051}
-  - component: {fileID: 1697548050}
-  - component: {fileID: 1697548049}
   - component: {fileID: 1697548052}
+  - component: {fileID: 1697548050}
   m_Layer: 5
   m_Name: Animal3
   m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1697548048
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12750,62 +12388,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.9, y: 6.549774}
   m_SizeDelta: {x: 1.0305, y: 0.836}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1697548049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1697548047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1697548050}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1697548052}
-        m_TargetAssemblyTypeName: AnimalSpecials, Assembly-CSharp
-        m_MethodName: JsonSave
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1697548050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12853,16 +12435,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1697548047}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cf5b7785a05da042b9acf9bbf5acb28, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a4d6b7e05696a14e97d3e38b14fb706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animalclasses:
+  animalData:
     hungryVariable: 0
     thirstyVariable: 0
     isIll: 0
-  ChanceToIll: 10
-  ChanceToHungrySpeed: 30
-  ChanceToThirstySpeed: 20
 --- !u!1 &1699760938
 GameObject:
   m_ObjectHideFlags: 0
@@ -14287,16 +13866,15 @@ GameObject:
   m_Component:
   - component: {fileID: 1963630310}
   - component: {fileID: 1963630313}
-  - component: {fileID: 1963630312}
-  - component: {fileID: 1963630311}
   - component: {fileID: 1963630314}
+  - component: {fileID: 1963630312}
   m_Layer: 5
   m_Name: Animal7
   m_TagString: Animal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1963630310
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14318,62 +13896,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.97, y: 4.65}
   m_SizeDelta: {x: 1.0305, y: 0.836}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1963630311
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1963630309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1963630312}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1963630314}
-        m_TargetAssemblyTypeName: AnimalSpecials, Assembly-CSharp
-        m_MethodName: JsonSave
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1963630312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14421,16 +13943,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1963630309}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cf5b7785a05da042b9acf9bbf5acb28, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a4d6b7e05696a14e97d3e38b14fb706, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animalclasses:
+  animalData:
     hungryVariable: 0
     thirstyVariable: 0
     isIll: 0
-  ChanceToIll: 10
-  ChanceToHungrySpeed: 30
-  ChanceToThirstySpeed: 20
 --- !u!1 &1967402497
 GameObject:
   m_ObjectHideFlags: 0

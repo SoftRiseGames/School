@@ -4,7 +4,7 @@ using UnityEngine;
 using System.IO;
 using System;
 
-public class AdoptList : MonoBehaviour
+public class AnimalAdoptationSettings : MonoBehaviour
 {
     public List<GameObject> customer;
     public string[] textStr;
@@ -16,7 +16,7 @@ public class AdoptList : MonoBehaviour
         {
             customer[indexcontrol].gameObject.SetActive(true);
             AnimalData data = JsonUtility.FromJson<AnimalData>(textStr[indexcontrol].ToString());
-            customer[indexcontrol].GetComponent<AnimalAdoptaionPrefabs>().animalData = data;
+            customer[indexcontrol].GetComponent<AnimalDataCheck>().animalData = data;
         }
     }
     

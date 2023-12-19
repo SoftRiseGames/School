@@ -59,7 +59,6 @@ public class AnimalSpecials : MonoBehaviour
         string jsonstring = JsonUtility.ToJson(animalclasses);
         indexcounter++;
         PlayerPrefs.SetInt("indexcounter", indexcounter);
-        this.gameObject.GetComponent<Button>().interactable = false;
         Debug.Log(jsonstring);
 
 #if UNITY_EDITOR
