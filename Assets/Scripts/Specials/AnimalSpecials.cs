@@ -9,6 +9,13 @@ public class AnimalData
     public int hungryVariable;
     public int thirstyVariable;
     public bool isIll;
+
+    //personality kýsýmlarý için ayarlý yer
+    public int personality;
+    public int hobbies;
+
+    //personality için 1 en enerjik 3 en tembel
+    //hobiler için 1 indoor, 2 ev insaný
 }
 
 public class AnimalSpecials : MonoBehaviour
@@ -20,12 +27,16 @@ public class AnimalSpecials : MonoBehaviour
     [SerializeField] int ChanceToThirstySpeed;
     private void Start()
     {
-        /*
-        if (PlayerPrefs.HasKey("indexcounter"))
-            indexcounter = PlayerPrefs.GetInt("indexcounter");
-        else
-            indexcounter = 0;
-        */
+        AnimalPersonalities();
+    }
+
+    public void AnimalPersonalities()
+    {
+        int randompersonality = Random.Range(1, 4);
+        int randomhobbie = Random.Range(1, 3);
+
+        animalclasses.personality = randompersonality;
+        animalclasses.hobbies = randomhobbie;
     }
     private void Update()
     {

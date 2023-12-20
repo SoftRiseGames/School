@@ -12,6 +12,12 @@ public class Humans
     public int mouthIndex;
     public int noseIndex;
 
+    public int personality;
+    public int hobbies;
+
+    //personality için 1 en enerjik 3 en tembel
+    //hobiler için 1 indoor, 2 ev insaný
+
 }
 public class HumanSpecials : MonoBehaviour
 {
@@ -23,10 +29,15 @@ public class HumanSpecials : MonoBehaviour
     
     void Start()
     {
-        /*
-        wave();
-        
-        */
+        HumanPersonalities();
+    }
+    public void HumanPersonalities()
+    {
+        int randompersonality = Random.Range(1, 4);
+        int randomhobbie = Random.Range(1, 3);
+
+        human.personality = randompersonality;
+        human.hobbies = randomhobbie;
     }
     void WaveSystem(Data data)
     {
