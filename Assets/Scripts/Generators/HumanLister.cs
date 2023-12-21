@@ -8,9 +8,8 @@ using UnityEngine.Events;
 
 public class HumanLister : MonoBehaviour
 {
-
     public Humans human;
-    
+    public HumanConversationSettings humanConversationTexts;
     [SerializeField] GameObject body;
     [SerializeField] GameObject Clothes;
     [SerializeField] GameObject eyes;
@@ -18,8 +17,11 @@ public class HumanLister : MonoBehaviour
     [SerializeField] GameObject mouth;
     [SerializeField] GameObject nose;
     [SerializeField] int ControlInteger;
+   
     public string[] textStr;
+    public HumanConversationSettings humanConversation;
     public HumanRandomManager randomManager;
+  
     private void Start()
     {
 #if UNITY_EDITOR
@@ -27,21 +29,31 @@ public class HumanLister : MonoBehaviour
 #else
         LoadJsonFiles(Application.persistentDataPath + "/JsonHumanFolder");
 #endif
+        Invoke("Generate", 0f);
 
-        Invoke("Generate",0f);
     }
+    
     public void Generate()
     {
         if (ControlInteger < textStr.Length-1)
         {
             ControlInteger = ControlInteger + 1;
-            Humans data = JsonUtility.FromJson<Humans>(textStr[ControlInteger].ToString());
-            body.GetComponent<SpriteRenderer>().sprite = randomManager.humanData[data.HumanType].body[data.bodyIndex];
-            Clothes.GetComponent<SpriteRenderer>().sprite = randomManager.humanData[data.HumanType].clothes[data.clotheIndex];
-            eyes.GetComponent<SpriteRenderer>().sprite = randomManager.humanData[data.HumanType].eyes[data.eyesIndex];
-            hair.GetComponent<SpriteRenderer>().sprite = randomManager.humanData[data.HumanType].hair[data.hairIndex];
-            mouth.GetComponent<SpriteRenderer>().sprite = randomManager.humanData[data.HumanType].mouth[data.mouthIndex];
-            nose.GetComponent<SpriteRenderer>().sprite = randomManager.humanData[data.HumanType].nose[data.noseIndex];
+            human = JsonUtility.FromJson<Humans>(textStr[ControlInteger].ToString());
+            body.GetComponent<SpriteRenderer>().sprite = randomManager.humanData[human.HumanType].body[human.bodyIndex];
+            Clothes.GetComponent<SpriteRenderer>().sprite = randomManager.humanData[human.HumanType].clothes[human.clotheIndex];
+            eyes.GetComponent<SpriteRenderer>().sprite = randomManager.humanData[human.HumanType].eyes[human.eyesIndex];
+            hair.GetComponent<SpriteRenderer>().sprite = randomManager.humanData[human.HumanType].hair[human.hairIndex];
+            mouth.GetComponent<SpriteRenderer>().sprite = randomManager.humanData[human.HumanType].mouth[human.mouthIndex];
+            nose.GetComponent<SpriteRenderer>().sprite = randomManager.humanData[human.HumanType].nose[human.noseIndex];
+
+            int personality = human.personality;
+            if (personality == 1)
+                humanConversationTexts.ConversationEnergeticHuman();
+            else if (personality == 2)
+                humanConversationTexts.ConversationNeutralHuman();
+            else if (personality == 3)
+                humanConversationTexts.ConversationCalmHuman();
+            
         }
         
     }
@@ -49,11 +61,8 @@ public class HumanLister : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
             Generate();
-
-        //
-
-
     }
+  
     public void LoadJsonFiles(string folderPath)
     {
         try
