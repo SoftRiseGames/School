@@ -9,7 +9,7 @@ using UnityEngine.Events;
 public class HumanLister : MonoBehaviour
 {
     public Humans human;
-    public HumanConversationSettings humanConversationTexts;
+    
     [SerializeField] GameObject body;
     [SerializeField] GameObject Clothes;
     [SerializeField] GameObject eyes;
@@ -17,11 +17,15 @@ public class HumanLister : MonoBehaviour
     [SerializeField] GameObject mouth;
     [SerializeField] GameObject nose;
     [SerializeField] int ControlInteger;
-   
+    public int personality;
     public string[] textStr;
-    public HumanConversationSettings humanConversation;
+    public HumanConversationSettings humanConversationTexts;
     public HumanRandomManager randomManager;
-  
+    private void Awake()
+    {
+        Invoke("Generate", 0f);
+        //Generate();
+    }
     private void Start()
     {
 #if UNITY_EDITOR
@@ -29,7 +33,7 @@ public class HumanLister : MonoBehaviour
 #else
         LoadJsonFiles(Application.persistentDataPath + "/JsonHumanFolder");
 #endif
-        Invoke("Generate", 0f);
+       
 
     }
     
@@ -46,7 +50,8 @@ public class HumanLister : MonoBehaviour
             mouth.GetComponent<SpriteRenderer>().sprite = randomManager.humanData[human.HumanType].mouth[human.mouthIndex];
             nose.GetComponent<SpriteRenderer>().sprite = randomManager.humanData[human.HumanType].nose[human.noseIndex];
 
-            int personality = human.personality;
+            personality = human.personality;
+          
             if (personality == 1)
                 humanConversationTexts.ConversationEnergeticHuman();
             else if (personality == 2)
@@ -54,6 +59,7 @@ public class HumanLister : MonoBehaviour
             else if (personality == 3)
                 humanConversationTexts.ConversationCalmHuman();
             
+           
         }
         
     }

@@ -487,7 +487,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba532aedc0133ec40800199f5cdef4be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  humanConversationTexts: {fileID: 0}
   body: {fileID: 628447802}
   Clothes: {fileID: 947101226}
   eyes: {fileID: 611969820}
@@ -495,8 +494,9 @@ MonoBehaviour:
   mouth: {fileID: 185453753}
   nose: {fileID: 1860245819}
   ControlInteger: -1
+  personality: 2
   textStr: []
-  humanConversation: {fileID: 670886456}
+  humanConversationTexts: {fileID: 670886456}
   randomManager: {fileID: 815025458}
 --- !u!1001 &283972872
 PrefabInstance:
@@ -979,7 +979,7 @@ GameObject:
   - component: {fileID: 670886456}
   - component: {fileID: 670886457}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: humanConverstaion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1012,7 +1012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fbc02a8e76981e42b438ba54bb61073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  humanList: {fileID: 197006620}
+  humans: {fileID: 197006620}
 --- !u!114 &670886457
 MonoBehaviour:
   m_ObjectHideFlags: 0
