@@ -68,7 +68,19 @@ public class HumanLister : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
             Generate();
     }
-  
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Animal") && collision.GetComponent<AnimalDataCheck>().animalData.hobbies == human.hobbies)
+        {
+            
+            Debug.Log("uyumlu");
+        }
+        else if(collision.GetComponent<AnimalDataCheck>().animalData.hobbies != human.hobbies)
+        {
+            Debug.Log("uyumsuz");
+        }
+    }
+
     public void LoadJsonFiles(string folderPath)
     {
         try
