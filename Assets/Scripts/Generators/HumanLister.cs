@@ -22,9 +22,11 @@ public class HumanLister : MonoBehaviour
     public string[] textStr;
     public HumanConversationSettings humanConversationTexts;
     public HumanRandomManager randomManager;
+    public GameObject dedectedGameobject;
+    bool isPass;
     private void Awake()
     {
-        Invoke("Generate", 0f);
+        
     }
     private void Start()
     {
@@ -33,8 +35,8 @@ public class HumanLister : MonoBehaviour
 #else
         LoadJsonFiles(Application.persistentDataPath + "/JsonHumanFolder");
 #endif
-       
 
+        Invoke("Generate", 0f);
     }
     
     public void Generate()
@@ -52,33 +54,59 @@ public class HumanLister : MonoBehaviour
 
             personality = human.personality;
             hobby = human.hobbies;
-            if (personality == 1)
-                humanConversationTexts.ConversationEnergeticHuman();
-            else if (personality == 2)
-                humanConversationTexts.ConversationNeutralHuman();
-            else if (personality == 3)
-                humanConversationTexts.ConversationCalmHuman();
-
+           
             humanConversationTexts.Conversation();
         }
         
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetMouseButtonUp(0) && isPass)
+        {
+            dedectedGameobject.gameObject.SetActive(false);
             Generate();
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Animal") && collision.GetComponent<AnimalDataCheck>().animalData.hobbies == human.hobbies)
-        {
+            dedectedGameobject = null;
+        }
             
-            Debug.Log("uyumlu");
-        }
-        else if(collision.GetComponent<AnimalDataCheck>().animalData.hobbies != human.hobbies)
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Animal"))
         {
-            Debug.Log("uyumsuz");
+            isPass = true;
+            if(collision.GetComponent<AnimalDataCheck>().animalData.hobbies == human.hobbies)
+            {
+                Debug.Log("uyumlu");
+            }
+            else if(collision.GetComponent<AnimalDataCheck>().animalData.hobbies != human.hobbies)
+            {
+                Debug.Log("uyumsuz"); 
+            }
+
+            ///////
+            ///eslesme icin
+            ///
+            if(collision.GetComponent<AnimalDataCheck>().animalData.personality == human.personality)
+            {
+                Debug.Log("harika eslesme");
+            }
+            else if(collision.GetComponent<AnimalDataCheck>().animalData.personality - human.personality == Math.Abs(1))
+            {
+                Debug.Log("ilimli eslesme");
+            }
+            else if (collision.GetComponent<AnimalDataCheck>().animalData.personality - human.personality == Math.Abs(2))
+            {
+                Debug.Log("kotu eslesme");
+            }
+            dedectedGameobject = collision.gameObject;
+
         }
+   
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        isPass = false;
     }
 
     public void LoadJsonFiles(string folderPath)

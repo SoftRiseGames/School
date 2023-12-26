@@ -7,30 +7,11 @@ using System.Threading.Tasks;
 public class HumanConversationSettings : MonoBehaviour
 {
     public HumanLister humans;
-    private void Awake()
-    {
-        Invoke("Conversation", 0f);
-    }
-    private void Start()
-    {
-        //humanConversation();
-    }
-    private void Update()
-    {
-        if (Input.GetKey(KeyCode.R))
-        {
-            Conversation();
-        }
-            
-    }
     
-    public void humanConversation()
-    {
-    
-           
-    }
+  
     public async void Conversation()
     {
+        await Task.Delay(100);  
         this.gameObject.GetComponent<DialogueSystemTrigger>().enabled = true;
         Debug.Log(humans.personality);
         if (humans.personality == 1)
