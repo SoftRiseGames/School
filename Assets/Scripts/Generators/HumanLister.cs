@@ -18,13 +18,13 @@ public class HumanLister : MonoBehaviour
     [SerializeField] GameObject nose;
     [SerializeField] int ControlInteger;
     public int personality;
+    public int hobby;
     public string[] textStr;
     public HumanConversationSettings humanConversationTexts;
     public HumanRandomManager randomManager;
     private void Awake()
     {
         Invoke("Generate", 0f);
-        //Generate();
     }
     private void Start()
     {
@@ -51,15 +51,15 @@ public class HumanLister : MonoBehaviour
             nose.GetComponent<SpriteRenderer>().sprite = randomManager.humanData[human.HumanType].nose[human.noseIndex];
 
             personality = human.personality;
-          
+            hobby = human.hobbies;
             if (personality == 1)
                 humanConversationTexts.ConversationEnergeticHuman();
             else if (personality == 2)
                 humanConversationTexts.ConversationNeutralHuman();
             else if (personality == 3)
                 humanConversationTexts.ConversationCalmHuman();
-            
-           
+
+            humanConversationTexts.Conversation();
         }
         
     }
