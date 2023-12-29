@@ -9,7 +9,7 @@ public class AnimalAdoptationSettings : MonoBehaviour
     public List<GameObject> customer;
     public string[] textStr;
     private string jsonfolders;
-    
+    public bool isControlCheck;
     void LoopSync()
     {
         for (int indexcontrol = 0; indexcontrol < textStr.Length; indexcontrol++)
@@ -19,7 +19,14 @@ public class AnimalAdoptationSettings : MonoBehaviour
             customer[indexcontrol].GetComponent<AnimalDataCheck>().animalData = data;
         }
     }
-    
+    public void isControlCheckFalse()
+    {
+        isControlCheck = false;
+    }
+    public void isControlCheckTrue()
+    {
+        isControlCheck = true;
+    }
     void Start()
     {
 #if UNITY_EDITOR

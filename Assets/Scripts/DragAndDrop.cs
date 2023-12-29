@@ -5,18 +5,25 @@ using UnityEngine;
 public class DragAndDrop : MonoBehaviour
 {
     Vector3 mousePosition;
-
+    private AnimalAdoptationSettings animalAdoptSettings;
+    private void Start()
+    {
+        animalAdoptSettings = GameObject.Find("AdopList").GetComponent<AnimalAdoptationSettings>();
+    }
     private Vector3 GetMousePosition()
     {
         return Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        
     }
         
     private void OnMouseDown()
     {
-        mousePosition = gameObject.transform.position - GetMousePosition();
+        if(animalAdoptSettings.isControlCheck)
+            mousePosition = gameObject.transform.position - GetMousePosition(); 
     }
     private void OnMouseDrag()
     {
-        transform.position = GetMousePosition() + mousePosition;
+        if (animalAdoptSettings.isControlCheck)
+            transform.position = GetMousePosition() + mousePosition;
     }
 }
