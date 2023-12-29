@@ -221,9 +221,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'living on a prayer
-
-'
+        value: "Ayn\u0131 zamanda d\xFCnyan\u0131n her yerini  gezen bir gezginim\n"
         type: 0
         typeString: 
       - title: Sequence
@@ -250,8 +248,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 21.174728, y: 4.66601}
+    canvasZoom: 1.03
   - id: 10
     fields:
     - title: Title
@@ -376,9 +374,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'on the street
-
-'
+        value: "Kafelerde tak\u0131lmak benim i\xE7in ya\u015Fam gereklili\u011Fi\n"
         type: 0
         typeString: 
       - title: Sequence
@@ -400,8 +396,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160
-        y: 80
+        x: 168
+        y: 93
         width: 160
         height: 30
     entryGroups: []

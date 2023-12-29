@@ -221,9 +221,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'Lemon Tree
-
-'
+        value: "Benim en sevdi\u011Fim hobim dizi izlemek\n\n"
         type: 0
         typeString: 
       - title: Sequence
@@ -245,8 +243,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160
-        y: 80
+        x: 234
+        y: 98
         width: 160
         height: 30
     entryGroups: []
@@ -376,9 +374,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'I Like it
-
-'
+        value: "Oyunlar benim i\xE7in bir ya\u015Fam tarz\u0131\n"
         type: 0
         typeString: 
       - title: Sequence
