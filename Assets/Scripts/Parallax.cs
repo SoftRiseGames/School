@@ -18,6 +18,10 @@ public class Parallax : MonoBehaviour
 
     void Update()
     {
+        ParallaxRotation();
+    }
+    void ParallaxRotation()
+    {
         // Get the mouse position
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
