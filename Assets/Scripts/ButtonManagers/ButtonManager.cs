@@ -5,6 +5,7 @@ using Cinemachine;
 public class ButtonManager : MonoBehaviour
 {
     public GameObject ScreenPage;
+    public GameObject MainMenu;
  
     public ScreenSystem backgame;
     private void Awake()
@@ -16,13 +17,18 @@ public class ButtonManager : MonoBehaviour
         }
         backgame = this.gameObject.transform.parent.gameObject.transform.parent.GetComponent<ScreenSystem>();
     }
- 
+    private void Start()
+    {
+        MainMenu = GameObject.Find("MonitorInScreen");
+    }
     public void OpenPage()
     {
+        MainMenu.SetActive(false);
         ScreenPage.SetActive(true);
     }
     public void ClosePage()
     {
+        MainMenu.SetActive(true);
         backgame.Close();
     }
 

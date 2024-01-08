@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ClosePages : MonoBehaviour
 {
     public ButtonScriptableObjects buttons;
-
+    public GameObject MainMenu;
     public TextMeshProUGUI ObjectName;
     private void Awake()
     {
@@ -15,6 +15,7 @@ public class ClosePages : MonoBehaviour
     }
     public void CloseInMarket()
     {
+        MainMenu.SetActive(true);
         this.gameObject.transform.parent.gameObject.transform.parent.gameObject.SetActive(false);
     }
 }

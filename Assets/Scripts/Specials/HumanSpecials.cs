@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEngine.UI;
 public class Humans
 {
     public int HumanType;
@@ -70,12 +71,12 @@ public class HumanSpecials : MonoBehaviour
     }
     public void iconMaker(Data data)
     {
-        this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = data.body[human.bodyIndex];
-        this.gameObject.transform.GetChild(2).GetComponent<SpriteRenderer>().sprite = data.clothes[human.clotheIndex];
-        this.gameObject.transform.GetChild(3).GetComponent<SpriteRenderer>().sprite = data.eyes[human.eyesIndex];
-        this.gameObject.transform.GetChild(4).GetComponent<SpriteRenderer>().sprite = data.hair[human.hairIndex];
-        this.gameObject.transform.GetChild(5).GetComponent<SpriteRenderer>().sprite = data.mouth[human.mouthIndex];
-        this.gameObject.transform.GetChild(6).GetComponent<SpriteRenderer>().sprite = data.nose[human.noseIndex];
+        this.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = data.body[human.bodyIndex];
+        this.gameObject.transform.GetChild(2).GetComponent<Image>().sprite = data.clothes[human.clotheIndex];
+        this.gameObject.transform.GetChild(3).GetComponent<Image>().sprite = data.eyes[human.eyesIndex];
+        this.gameObject.transform.GetChild(4).GetComponent<Image>().sprite = data.hair[human.hairIndex];
+        this.gameObject.transform.GetChild(5).GetComponent<Image>().sprite = data.mouth[human.mouthIndex];
+        this.gameObject.transform.GetChild(6).GetComponent<Image>().sprite = data.nose[human.noseIndex];
     }
     public void HumanJsonSave()
     {

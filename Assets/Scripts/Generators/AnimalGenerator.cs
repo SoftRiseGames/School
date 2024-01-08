@@ -12,6 +12,7 @@ public class AnimalGenerator : MonoBehaviour
     int ControlIndex = -1;
     public Button acceptButton;
     public Button cancelButton;
+    int accept = 0;
     private void Start()
     {
         onOpenButtons = Random.Range(1, buttons.Count);
@@ -33,6 +34,8 @@ public class AnimalGenerator : MonoBehaviour
     {
         buttons[ControlIndex].GetComponent<AnimalSpecials>().JsonSave();
         buttons[ControlIndex].gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().DOFade(0, 1);
+        accept = accept + 1;
+        PlayerPrefs.SetInt("accept", accept);
         buttons[ControlIndex].gameObject.GetComponent<SpriteRenderer>().DOFade(0, 1).OnComplete(() =>
         {
             buttons[ControlIndex].gameObject.SetActive(false);
