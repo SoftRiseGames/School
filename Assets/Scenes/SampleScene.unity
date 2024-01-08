@@ -1593,7 +1593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttons: {fileID: 11400000, guid: d92b1e49c39e37e4eb14eea9558366df, type: 2}
-  MainMenu: {fileID: 0}
+  MainMenu: {fileID: 28895451}
   ObjectName: {fileID: 567849897}
 --- !u!1 &160703848
 GameObject:
@@ -3604,7 +3604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttons: {fileID: 11400000, guid: d92b1e49c39e37e4eb14eea9558366df, type: 2}
-  MainMenu: {fileID: 0}
+  MainMenu: {fileID: 28895451}
   ObjectName: {fileID: 1256940996}
 --- !u!114 &557744023
 MonoBehaviour:
