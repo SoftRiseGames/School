@@ -18,12 +18,15 @@ public class HumanLister : MonoBehaviour
     [SerializeField] GameObject nose;
     [SerializeField] int ControlInteger;
     public int personality;
+    public CurrencyData respectCurrency;
     public int hobby;
     public string[] textStr;
     public HumanConversationSettings humanConversationTexts;
     public HumanRandomManager randomManager;
     public GameObject dedectedGameobject;
     bool isPass;
+
+    public CurrencyData currency;
     private void Awake()
     {
         
@@ -81,7 +84,7 @@ public class HumanLister : MonoBehaviour
             }
             else if(collision.GetComponent<AnimalDataCheck>().animalData.hobbies != human.hobbies)
             {
-                Debug.Log("uyumsuz"); 
+                Debug.Log("uyumsuz");
             }
 
             ///////
