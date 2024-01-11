@@ -6,10 +6,7 @@ using TMPro;
 public class moneyUI : MonoBehaviour
 {
     public CurrencyData currency;
-    void Start()
-    {
-        
-    }
+
 
     // Update is called once per frame
     void Update()
