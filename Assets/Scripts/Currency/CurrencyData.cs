@@ -13,7 +13,7 @@ public class CurrencyData :ScriptableObject
     public UnityEvent OnAmountChanged;
     public CurrencyType type;
 
-    
+ 
     public int Amount
     {
         get => _amount;
