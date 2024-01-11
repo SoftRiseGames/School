@@ -83,10 +83,12 @@ public class HumanLister : MonoBehaviour
             if(collision.GetComponent<AnimalDataCheck>().animalData.hobbies == human.hobbies)
             {
                 Debug.Log("uyumlu");
+                currency.amount += 20;
             }
             else if(collision.GetComponent<AnimalDataCheck>().animalData.hobbies != human.hobbies)
             {
                 Debug.Log("uyumsuz");
+                currency.amount -= 20;
             }
 
             ///////
@@ -95,14 +97,17 @@ public class HumanLister : MonoBehaviour
             if(collision.GetComponent<AnimalDataCheck>().animalData.personality == human.personality)
             {
                 Debug.Log("harika eslesme");
+                currency.amount += 20;
             }
             else if(collision.GetComponent<AnimalDataCheck>().animalData.personality - human.personality == Math.Abs(1))
             {
                 Debug.Log("ilimli eslesme");
+                currency.amount += 10;
             }
             else if (collision.GetComponent<AnimalDataCheck>().animalData.personality - human.personality == Math.Abs(2))
             {
                 Debug.Log("kotu eslesme");
+                currency.amount -= 20;
             }
             dedectedGameobject = collision.gameObject;
 

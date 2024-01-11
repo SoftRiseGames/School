@@ -26,4 +26,5 @@ public class CurrencyData :ScriptableObject
     }
     
     [SerializeField] int _amount;
+    internal int amount;
 }
