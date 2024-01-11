@@ -8,7 +8,7 @@ public class MarketingButtons : MonoBehaviour
     public ButtonScriptableObjects buttons;
     
     public TextMeshProUGUI ObjectName;
-
+    
     public CurrencyData moneyCurrency;
     private void Awake()
     {
