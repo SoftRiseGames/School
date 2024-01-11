@@ -4,8 +4,9 @@ using UnityEngine;
 using UnityEngine.Events;
 public enum CurrencyType
 {
-    Money
+    Money, Respect//b
 }
+
 
 [CreateAssetMenu(menuName ="Scrýptable Objects/Currency Data/Currency")]
 public class CurrencyData :ScriptableObject

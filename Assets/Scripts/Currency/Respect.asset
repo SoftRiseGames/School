@@ -15,5 +15,5 @@ MonoBehaviour:
   OnAmountChanged:
     m_PersistentCalls:
       m_Calls: []
-  type: 0
+  type: 1
   _amount: 500

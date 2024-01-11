@@ -26,6 +26,8 @@ public class HumanLister : MonoBehaviour
     public GameObject dedectedGameobject;
     bool isPass;
 
+    public sliderSystem slider;//b
+
     public CurrencyData currency;
     private void Awake()
     {
