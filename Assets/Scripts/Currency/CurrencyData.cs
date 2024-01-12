@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 public enum CurrencyType
 {
-    Money//b
+    Money, Respect//b
 }
 
 
