@@ -7,14 +7,15 @@ using UnityEngine.UIElements;
 public class sliderSystem : MonoBehaviour
 {
     public CurrencyData currency;
-    public HumanLister human;
+    private HumanLister human;//b
     public UnityEngine.UI.Slider slider;
-    public float maxSliderValue = 200f;
-    public float minSliderValue = 0f;
-    public float sliderChangeRate = 20f;
+    public float maxSliderValue = 200f;//b
+    public float minSliderValue = 0f;//b
+    public float sliderChangeRate = 20f;//b
+    public float startingValue = 100f;//b
     void Start()
     {
-
+        currency.value = startingValue;//b
     }
 
     // Update is called once per frame

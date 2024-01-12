@@ -161,7 +161,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 853.76, y: 202}
+  m_AnchoredPosition: {x: 847.16003, y: 364.057}
   m_SizeDelta: {x: 141.06, y: 27.9429}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &16826992
@@ -177,11 +177,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currency: {fileID: 11400000, guid: 4e68e33aa1568c44da213572e9536f6b, type: 2}
-  human: {fileID: 0}
   slider: {fileID: 16826993}
   maxSliderValue: 200
   minSliderValue: 0
   sliderChangeRate: 20
+  startingValue: 100
 --- !u!114 &16826993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,7 +229,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 200
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -710,7 +710,7 @@ MonoBehaviour:
   nose: {fileID: 1860245819}
   ControlInteger: -1
   personality: 2
-  respectCurrency: {fileID: 0}
+  respectCurrency: {fileID: 11400000, guid: 4e68e33aa1568c44da213572e9536f6b, type: 2}
   hobby: 0
   textStr: []
   humanConversationTexts: {fileID: 670886456}
@@ -1296,7 +1296,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 853.6, y: 509}
+  m_AnchoredPosition: {x: 847, y: 401}
   m_SizeDelta: {x: 141.405, y: 42.278}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &625636808
@@ -2356,7 +2356,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -5, y: 0}
+  m_AnchoredPosition: {x: -4.9999847, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1281680070

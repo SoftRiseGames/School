@@ -28,7 +28,7 @@ public class HumanLister : MonoBehaviour
 
     public sliderSystem slider;//b
 
-    public CurrencyData currency;
+    public CurrencyData currency;//b
     private void Awake()
     {
         
@@ -83,12 +83,12 @@ public class HumanLister : MonoBehaviour
             if(collision.GetComponent<AnimalDataCheck>().animalData.hobbies == human.hobbies)
             {
                 Debug.Log("uyumlu");
-                currency.amount += 20;
+                currency.amount += 20;//b
             }
             else if(collision.GetComponent<AnimalDataCheck>().animalData.hobbies != human.hobbies)
             {
                 Debug.Log("uyumsuz");
-                currency.amount -= 20;
+                currency.amount -= 20;//b
             }
 
             ///////
@@ -97,17 +97,17 @@ public class HumanLister : MonoBehaviour
             if(collision.GetComponent<AnimalDataCheck>().animalData.personality == human.personality)
             {
                 Debug.Log("harika eslesme");
-                currency.amount += 20;
+                currency.amount += 20;//b
             }
             else if(collision.GetComponent<AnimalDataCheck>().animalData.personality - human.personality == Math.Abs(1))
             {
                 Debug.Log("ilimli eslesme");
-                currency.amount += 10;
+                currency.amount += 10;//b
             }
             else if (collision.GetComponent<AnimalDataCheck>().animalData.personality - human.personality == Math.Abs(2))
             {
                 Debug.Log("kotu eslesme");
-                currency.amount -= 20;
+                currency.amount -= 20;//b
             }
             dedectedGameobject = collision.gameObject;
 

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 public enum CurrencyType
 {
-    Money, Respect//b
+    Money//b
 }
 
 
@@ -13,6 +13,8 @@ public class CurrencyData :ScriptableObject
 {
     public UnityEvent OnAmountChanged;
     public CurrencyType type;
+    private sliderSystem _sliderSystem;//b
+    private HumanLister human;//b
 
  
     public int Amount
@@ -27,4 +29,5 @@ public class CurrencyData :ScriptableObject
     
     [SerializeField] int _amount;
     internal int amount;
+    internal float value;
 }
