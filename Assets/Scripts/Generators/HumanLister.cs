@@ -88,7 +88,7 @@ public class HumanLister : MonoBehaviour
             if (collision.GetComponent<AnimalDataCheck>().animalData.hobbies == human.hobbies )
             {
                 Debug.Log("uyumlu");
-                totalCounter -= 20;
+                totalCounter += 20;
                     
             }
             else if(collision.GetComponent<AnimalDataCheck>().animalData.hobbies != human.hobbies )
@@ -108,7 +108,7 @@ public class HumanLister : MonoBehaviour
             else if(collision.GetComponent<AnimalDataCheck>().animalData.personality - human.personality == Math.Abs(1) )
             {
                 Debug.Log("ilimli eslesme");
-               
+                totalCounter += 10;
             }
             else if (collision.GetComponent<AnimalDataCheck>().animalData.personality - human.personality == Math.Abs(2) )
             {
