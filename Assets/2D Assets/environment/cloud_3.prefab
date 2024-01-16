@@ -98,8 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8037534032adee043b82d018f4ecf36c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeedMin: 2
-  moveSpeedMax: 3
+  moveSpeedMin: 1
+  moveSpeedMax: 2
   fadeInTimeMin: 2
   fadeInTimeMax: 3
   fadeOutTimeMin: 2

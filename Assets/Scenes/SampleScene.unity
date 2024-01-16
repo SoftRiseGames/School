@@ -10112,7 +10112,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1736681662}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.53, y: 0, z: 0}
+  m_LocalPosition: {x: -0.4, y: 0.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10495,11 +10495,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currency: {fileID: 11400000, guid: 2d5a40dc0f2650c4f825f0502a95d570, type: 2}
-  slider: {fileID: 1766783194}
-  maxSliderValue: 200
-  minSliderValue: 0
-  sliderChangeRate: 20
-  startingValue: 100
 --- !u!1 &1793833715
 GameObject:
   m_ObjectHideFlags: 0
