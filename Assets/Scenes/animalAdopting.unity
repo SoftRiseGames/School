@@ -177,11 +177,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currency: {fileID: 11400000, guid: 4e68e33aa1568c44da213572e9536f6b, type: 2}
-  slider: {fileID: 16826993}
-  maxSliderValue: 200
-  minSliderValue: 0
-  sliderChangeRate: 20
-  startingValue: 100
 --- !u!114 &16826993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -710,14 +705,13 @@ MonoBehaviour:
   nose: {fileID: 1860245819}
   ControlInteger: -1
   personality: 2
-  respectCurrency: {fileID: 11400000, guid: 4e68e33aa1568c44da213572e9536f6b, type: 2}
   hobby: 0
   textStr: []
   humanConversationTexts: {fileID: 670886456}
   randomManager: {fileID: 815025458}
   dedectedGameobject: {fileID: 0}
-  slider: {fileID: 16826992}
-  currency: {fileID: 11400000, guid: 2d5a40dc0f2650c4f825f0502a95d570, type: 2}
+  currency: {fileID: 11400000, guid: 4e68e33aa1568c44da213572e9536f6b, type: 2}
+  slider: {fileID: 16826993}
 --- !u!61 &197006621
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1311,7 +1305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c5cf87197095eb4ba64cba7782aff18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currency: {fileID: 11400000, guid: 2d5a40dc0f2650c4f825f0502a95d570, type: 2}
+  currency: {fileID: 11400000, guid: 4e68e33aa1568c44da213572e9536f6b, type: 2}
 --- !u!114 &625636809
 MonoBehaviour:
   m_ObjectHideFlags: 0

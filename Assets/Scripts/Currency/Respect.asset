@@ -15,8 +15,8 @@ MonoBehaviour:
   OnAmountChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000}
-        m_TargetAssemblyTypeName: 
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: CurrencyData, Assembly-CSharp
         m_MethodName: 
         m_Mode: 1
         m_Arguments:
@@ -27,5 +27,5 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  type: 1
+  type: 0
   _amount: 100

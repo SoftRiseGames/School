@@ -10203,8 +10203,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f2162b9a70851442b516367e37e9249, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currency: {fileID: 11400000, guid: 4e68e33aa1568c44da213572e9536f6b, type: 2}
-  slider: {fileID: 0}
+  currency: {fileID: 11400000, guid: 2d5a40dc0f2650c4f825f0502a95d570, type: 2}
+  slider: {fileID: 1766783194}
   maxSliderValue: 200
   minSliderValue: 0
   sliderChangeRate: 20
