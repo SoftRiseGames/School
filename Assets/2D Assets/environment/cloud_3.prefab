@@ -100,8 +100,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeedMin: 1
   moveSpeedMax: 2
-  fadeInTimeMin: 2
-  fadeInTimeMax: 3
+  fadeInTimeMin: 3
+  fadeInTimeMax: 4
   fadeOutTimeMin: 2
   fadeOutTimeMax: 3
   fullOpacityDuration: 2
