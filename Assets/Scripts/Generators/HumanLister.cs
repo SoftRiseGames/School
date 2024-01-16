@@ -18,21 +18,18 @@ public class HumanLister : MonoBehaviour
     [SerializeField] GameObject nose;
     [SerializeField] int ControlInteger;
     public int personality;
-    public CurrencyData respectCurrency;
+   
     public int hobby;
     public string[] textStr;
     public HumanConversationSettings humanConversationTexts;
     public HumanRandomManager randomManager;
     public GameObject dedectedGameobject;
     bool isPass;
+    public CurrencyData currency; //b
+    public Slider slider;//b
 
-    public sliderSystem slider;//b
-
-    public CurrencyData currency;//b
-    private void Awake()
-    {
-        
-    }
+    int totalCounter;
+    
     private void Start()
     {
 #if UNITY_EDITOR
@@ -46,6 +43,7 @@ public class HumanLister : MonoBehaviour
     
     public void Generate()
     {
+       
         if (ControlInteger < textStr.Length-1)
         {
             ControlInteger = ControlInteger + 1;
@@ -70,55 +68,60 @@ public class HumanLister : MonoBehaviour
         {
             dedectedGameobject.gameObject.SetActive(false);
             Generate();
+            Respect(totalCounter);
             dedectedGameobject = null;
+            isPass = false;
         }
-            
+        Debug.Log(totalCounter);
+        slider.value = currency.Amount;
+      
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
+        isPass = true;
+        totalCounter = 0;
         if (collision.CompareTag("Animal"))
         {
-            isPass = true;
-            if(collision.GetComponent<AnimalDataCheck>().animalData.hobbies == human.hobbies)
+            dedectedGameobject = collision.gameObject;
+
+            if (collision.GetComponent<AnimalDataCheck>().animalData.hobbies == human.hobbies )
             {
                 Debug.Log("uyumlu");
-                currency.amount += 20;//b
+                totalCounter -= 20;
+                    
             }
-            else if(collision.GetComponent<AnimalDataCheck>().animalData.hobbies != human.hobbies)
+            else if(collision.GetComponent<AnimalDataCheck>().animalData.hobbies != human.hobbies )
             {
                 Debug.Log("uyumsuz");
-                currency.amount -= 20;//b
+                totalCounter -= 20;
             }
 
             ///////
             ///eslesme icin
             ///
-            if(collision.GetComponent<AnimalDataCheck>().animalData.personality == human.personality)
+            if(collision.GetComponent<AnimalDataCheck>().animalData.personality == human.personality )
             {
                 Debug.Log("harika eslesme");
-                currency.amount += 20;//b
+                totalCounter += 20;
             }
-            else if(collision.GetComponent<AnimalDataCheck>().animalData.personality - human.personality == Math.Abs(1))
+            else if(collision.GetComponent<AnimalDataCheck>().animalData.personality - human.personality == Math.Abs(1) )
             {
                 Debug.Log("ilimli eslesme");
-                currency.amount += 10;//b
+               
             }
-            else if (collision.GetComponent<AnimalDataCheck>().animalData.personality - human.personality == Math.Abs(2))
+            else if (collision.GetComponent<AnimalDataCheck>().animalData.personality - human.personality == Math.Abs(2) )
             {
                 Debug.Log("kotu eslesme");
-                currency.amount -= 20;//b
+                totalCounter -= 20;
             }
-            dedectedGameobject = collision.gameObject;
-
         }
-   
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         isPass = false;
     }
-
+    
     public void LoadJsonFiles(string folderPath)
     {
         try
@@ -150,5 +153,12 @@ public class HumanLister : MonoBehaviour
             Debug.Log($"Error: {ex.Message}");
 
         }
+    }
+
+    public int Respect(int respecttotal)
+    {
+        currency.Amount += respecttotal;
+        PlayerPrefs.SetInt("RespectAmount", currency.Amount);
+        return currency.Amount;
     }
 }

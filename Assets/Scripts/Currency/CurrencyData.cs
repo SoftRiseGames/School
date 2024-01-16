@@ -13,8 +13,6 @@ public class CurrencyData :ScriptableObject
 {
     public UnityEvent OnAmountChanged;
     public CurrencyType type;
-    private sliderSystem _sliderSystem;//b
-    private HumanLister human;//b
 
  
     public int Amount
@@ -26,8 +24,5 @@ public class CurrencyData :ScriptableObject
             OnAmountChanged?.Invoke();
         }
     }
-    
-    [SerializeField] int _amount;
-    internal int amount;
-    internal float value;
+    public int _amount;
 }
