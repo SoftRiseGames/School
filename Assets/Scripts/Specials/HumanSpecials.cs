@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using UnityEngine.UI;
+using TMPro;
 public class Humans
 {
     public int HumanType;
@@ -16,6 +17,7 @@ public class Humans
     public int personality;
     public int hobbies;
 
+    
     //personality için 1 en enerjik 3 en tembel
     //hobiler için 1 indoor, 2 ev insaný
 
@@ -25,42 +27,32 @@ public class HumanSpecials : MonoBehaviour
     public Humans human = new Humans();
     public HumanRandomManager randomizerList;
     public int indexcounter;
-
+    public TextMeshProUGUI personalityText;
     [SerializeField] Sprite face;
     
     void Start()
     {
         HumanPersonalities();
+        SpecialsTextManager();
     }
     public void HumanPersonalities()
     {
-        int randompersonality = Random.Range(1, 4);
-        int randomhobbie = Random.Range(1, 3);
-
-        human.personality = randompersonality;
-        human.hobbies = randomhobbie;
+        human.personality = Random.Range(1, 4);
+        human.hobbies = Random.Range(1, 3);
     }
     void WaveSystem(Data data)
     {
-        int bodyRandom = Random.Range(0, data.body.Count);
-        face = data.body[bodyRandom];
-        human.bodyIndex = bodyRandom;
-        int clothesrandom = Random.Range(0, data.clothes.Count);
-        human.clotheIndex = clothesrandom;
-        int eyesRandom = Random.Range(0, data.eyes.Count);
-        human.eyesIndex = eyesRandom;
-        int hairRandom = Random.Range(0, data.hair.Count);
-        human.hairIndex = hairRandom;
-        int mouthRandom = Random.Range(0, data.mouth.Count);
-        human.mouthIndex = mouthRandom;
-        int noseRandom = Random.Range(0, data.nose.Count);
-        human.noseIndex = noseRandom;
+        human.bodyIndex = Random.Range(0, data.body.Count);
+        human.clotheIndex = Random.Range(0, data.clothes.Count);
+        human.eyesIndex = Random.Range(0, data.eyes.Count);
+        human.hairIndex = Random.Range(0, data.hair.Count);
+        human.mouthIndex = Random.Range(0, data.mouth.Count);
+        human.noseIndex = Random.Range(0, data.nose.Count);
     }
     public void wave()
     {
-        int selectedRandomIndex = Random.Range(0, randomizerList.humanData.Count);
-        human.HumanType = selectedRandomIndex;
-        WaveSystem(randomizerList.humanData[selectedRandomIndex]);
+        human.HumanType = Random.Range(0, randomizerList.humanData.Count);
+        WaveSystem(randomizerList.humanData[human.HumanType]);
         iconMaker(randomizerList.humanData[human.HumanType]);
     }
     private void Update()
@@ -69,14 +61,24 @@ public class HumanSpecials : MonoBehaviour
             indexcounter = PlayerPrefs.GetInt("humanCount"); 
 
     }
+    void SpecialsTextManager()
+    {
+        if(human.HumanType == 0 || human.HumanType == 1)
+            personalityText.text = "kiþi " + Random.Range(19, 29).ToString() + " yaþýnda";
+        else if(human.HumanType == 2 || human.HumanType == 3)
+            personalityText.text = "kiþi " + Random.Range(30, 50).ToString() + " yaþýnda";
+
+
+    }
+   
     public void iconMaker(Data data)
     {
-        this.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = data.body[human.bodyIndex];
-        this.gameObject.transform.GetChild(2).GetComponent<Image>().sprite = data.clothes[human.clotheIndex];
-        this.gameObject.transform.GetChild(3).GetComponent<Image>().sprite = data.eyes[human.eyesIndex];
-        this.gameObject.transform.GetChild(4).GetComponent<Image>().sprite = data.hair[human.hairIndex];
-        this.gameObject.transform.GetChild(5).GetComponent<Image>().sprite = data.mouth[human.mouthIndex];
-        this.gameObject.transform.GetChild(6).GetComponent<Image>().sprite = data.nose[human.noseIndex];
+        this.gameObject.transform.GetChild(1).GetChild(0).GetComponent<Image>().sprite = data.body[human.bodyIndex];
+        this.gameObject.transform.GetChild(1).GetChild(1).GetComponent<Image>().sprite = data.clothes[human.clotheIndex];
+        this.gameObject.transform.GetChild(1).GetChild(2).GetComponent<Image>().sprite = data.eyes[human.eyesIndex];
+        this.gameObject.transform.GetChild(1).GetChild(3).GetComponent<Image>().sprite = data.hair[human.hairIndex];
+        this.gameObject.transform.GetChild(1).GetChild(4).GetComponent<Image>().sprite = data.mouth[human.mouthIndex];
+        this.gameObject.transform.GetChild(1).GetChild(5).GetComponent<Image>().sprite = data.nose[human.noseIndex];
     }
     public void HumanJsonSave()
     {

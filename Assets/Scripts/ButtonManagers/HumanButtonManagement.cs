@@ -12,7 +12,7 @@ public class HumanButtonManagement : MonoBehaviour
         foreach (var allbuttons in buttons)
         {
             allbuttons.SetActive(false);
-            allbuttons.GetComponent<HumanSpecials>().wave();
+            allbuttons.transform.GetComponent<HumanSpecials>().wave();
         }
 
         onOpenButtons = Random.Range(1, buttons.Count);

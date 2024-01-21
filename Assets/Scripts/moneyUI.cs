@@ -11,6 +11,6 @@ public class moneyUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.gameObject.GetComponent<TextMeshProUGUI>().text = "Money: " + currency.Amount.ToString();
+        this.gameObject.GetComponent<TextMeshProUGUI>().text = currency.Amount.ToString();
     }
 }

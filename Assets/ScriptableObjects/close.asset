@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05d378cf728c92948ae23e470dcda3f4, type: 3}
   m_Name: close
   m_EditorClassIdentifier: 
-  marketname: Close
-  price: 0
-  sprite: {fileID: 21300000, guid: 2faab47e6ea7b9c4a884315241b2ab5c, type: 3}
+  marketname: 
+  price: 50
+  sprite: {fileID: 21300000, guid: 732ff025f096c2441bf2633046fa9b14, type: 3}

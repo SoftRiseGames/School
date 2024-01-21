@@ -8,8 +8,14 @@ public class ScreenSystem : MonoBehaviour
 {
     public CinemachineVirtualCamera MainCam;
     public CinemachineVirtualCamera ScreenCam;
+    public GameObject monitor;
+    
     public Button[] Sites;
 
+    private void Awake()
+    {
+      
+    }
     private void OnMouseDown()
     {
         MainCam.gameObject.SetActive(false);
@@ -21,11 +27,12 @@ public class ScreenSystem : MonoBehaviour
        
         DeInteractive();
         StopCoroutine("isInteractible");
+        
         MainCam.gameObject.SetActive(true);
         ScreenCam.gameObject.SetActive(false);
     }
     // Update is called once per frame
-   
+    
     IEnumerator isInteractible()
     {
         

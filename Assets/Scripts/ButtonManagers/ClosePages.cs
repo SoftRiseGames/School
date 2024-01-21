@@ -10,7 +10,6 @@ public class ClosePages : MonoBehaviour
     public TextMeshProUGUI ObjectName;
     private void Awake()
     {
-        ObjectName.text = buttons.marketname;
         this.gameObject.GetComponent<Image>().sprite = buttons.sprite;
     }
     public void CloseInMarket()
