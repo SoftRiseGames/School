@@ -18,6 +18,7 @@ public class HumanLister : MonoBehaviour
     [SerializeField] GameObject nose;
     [SerializeField] int ControlInteger;
     public int personality;
+
    
     public int hobby;
     public string[] textStr;

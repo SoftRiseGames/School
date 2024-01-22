@@ -73,12 +73,13 @@ public class HumanSpecials : MonoBehaviour
    
     public void iconMaker(Data data)
     {
-        this.gameObject.transform.GetChild(1).GetChild(0).GetComponent<Image>().sprite = data.body[human.bodyIndex];
-        this.gameObject.transform.GetChild(1).GetChild(1).GetComponent<Image>().sprite = data.clothes[human.clotheIndex];
-        this.gameObject.transform.GetChild(1).GetChild(2).GetComponent<Image>().sprite = data.eyes[human.eyesIndex];
-        this.gameObject.transform.GetChild(1).GetChild(3).GetComponent<Image>().sprite = data.hair[human.hairIndex];
-        this.gameObject.transform.GetChild(1).GetChild(4).GetComponent<Image>().sprite = data.mouth[human.mouthIndex];
-        this.gameObject.transform.GetChild(1).GetChild(5).GetComponent<Image>().sprite = data.nose[human.noseIndex];
+        
+        this.gameObject.transform.GetChild(0).GetChild(0).GetComponent<Image>().sprite = data.body[human.bodyIndex];
+        this.gameObject.transform.GetChild(0).GetChild(1).GetComponent<Image>().sprite = data.clothes[human.clotheIndex];
+        this.gameObject.transform.GetChild(0).GetChild(2).GetComponent<Image>().sprite = data.eyes[human.eyesIndex];
+        this.gameObject.transform.GetChild(0).GetChild(3).GetComponent<Image>().sprite = data.hair[human.hairIndex];
+        this.gameObject.transform.GetChild(0).GetChild(4).GetComponent<Image>().sprite = data.mouth[human.mouthIndex];
+        this.gameObject.transform.GetChild(0).GetChild(5).GetComponent<Image>().sprite = data.nose[human.noseIndex];
     }
     public void HumanJsonSave()
     {

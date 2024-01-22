@@ -29,6 +29,6 @@ public class RandomPrefabSpawner : MonoBehaviour
         Vector3 globalPosition = spawnedObject.transform.position;
 
         // Do something with the global position (e.g., print it)
-        Debug.Log("Spawned object's global position: " + globalPosition);
+        
     }
 }
