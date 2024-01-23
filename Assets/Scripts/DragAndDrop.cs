@@ -23,6 +23,7 @@ public class DragAndDrop : MonoBehaviour
     }
     private void OnMouseDrag()
     {
+
         if (animalAdoptSettings.isControlCheck)
             transform.position = GetMousePosition() + mousePosition;
     }

@@ -68,6 +68,8 @@ public class HumanLister : MonoBehaviour
         if (Input.GetMouseButtonUp(0) && isPass)
         {
             dedectedGameobject.gameObject.SetActive(false);
+            PlayerPrefs.DeleteKey("HungryValue" + dedectedGameobject.name);
+            PlayerPrefs.DeleteKey("ThirstyValue" + dedectedGameobject.name);
             Generate();
             Respect(totalCounter);
             dedectedGameobject = null;

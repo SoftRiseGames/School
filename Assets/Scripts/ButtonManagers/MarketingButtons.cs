@@ -10,6 +10,9 @@ public class MarketingButtons : MonoBehaviour
     public TextMeshProUGUI ObjectName;
     
     public CurrencyData moneyCurrency;
+
+    [SerializeField] FoodFill foodData;
+    [SerializeField] WaterFill waterData;
     private void Awake()
     {
         ObjectName = this.gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
@@ -23,7 +26,30 @@ public class MarketingButtons : MonoBehaviour
 
     public void Buy()
     {
-        Money(buttons.price);
+        if(moneyCurrency.Amount>buttons.price)
+            Money(buttons.price);
+    }
+
+    public void WaterDataCheck()
+    {
+        if(moneyCurrency.Amount > buttons.price)
+        {
+            if (waterData.waterLevel <= 100)
+                waterData.waterLevel += waterData.waterLevel + 50;
+            if (waterData.waterLevel > 100)
+                waterData.waterLevel = 100;
+        }
+       
+    }
+    public void foodDataCheck()
+    {
+        if (moneyCurrency.Amount > buttons.price)
+        {
+            if (foodData.foodLevel <= 100)
+                foodData.foodLevel += foodData.foodLevel + 50;
+            if (foodData.foodLevel > 100)
+                foodData.foodLevel = 100;
+        }
     }
 
    
