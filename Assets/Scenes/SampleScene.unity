@@ -5680,7 +5680,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 20
   m_TargetDisplay: 0
 --- !u!224 &671448878
 RectTransform:
@@ -9277,7 +9277,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 19
   m_TargetDisplay: 0
 --- !u!1 &1514430905
 GameObject:
