@@ -35,28 +35,6 @@ MonoBehaviour:
     underline: 0
   baseID: 1
   actors:
-  - id: 1
-    fields:
-    - title: Name
-      value: Player
-      type: 0
-      typeString: 
-    - title: Pictures
-      value: '[]'
-      type: 3
-      typeString: CustomFieldType_Files
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-    - title: IsPlayer
-      value: True
-      type: 2
-      typeString: CustomFieldType_Boolean
-    portrait: {fileID: 0}
-    spritePortrait: {fileID: 0}
-    alternatePortraits: []
-    spritePortraits: []
   - id: 2
     fields:
     - title: Name
@@ -73,6 +51,28 @@ MonoBehaviour:
       typeString: 
     - title: IsPlayer
       value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    portrait: {fileID: 0}
+    spritePortrait: {fileID: 0}
+    alternatePortraits: []
+    spritePortraits: []
+  - id: 1
+    fields:
+    - title: Name
+      value: Player
+      type: 0
+      typeString: 
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+    - title: IsPlayer
+      value: True
       type: 2
       typeString: CustomFieldType_Boolean
     portrait: {fileID: 0}
@@ -221,7 +221,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Benim en sevdi\u011Fim hobim dizi izlemek\n\n"
+        value: "Bo\u015F zamanlar\u0131m\u0131n \xE7o\u011Funu m\xFCzik dinleyerek
+          ge\xE7iriyorum.\n\n"
         type: 0
         typeString: 
       - title: Sequence
@@ -243,8 +244,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 234
-        y: 98
+        x: 161
+        y: 107
         width: 160
         height: 30
     entryGroups: []
@@ -374,7 +375,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Oyunlar benim i\xE7in bir ya\u015Fam tarz\u0131\n"
+        value: "Zaman\u0131m\u0131 televizyon izleyerek ge\xE7irmeyi severim.\n"
         type: 0
         typeString: 
       - title: Sequence

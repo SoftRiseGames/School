@@ -221,7 +221,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'selam
+        value: 'Selam. Bana "isim" "soyisim" diyebilirsiniz.
 
 '
         type: 0
@@ -242,12 +242,6 @@ MonoBehaviour:
         originDialogueID: 1
         destinationConversationID: 5
         destinationDialogueID: 2
-        isConnector: 0
-        priority: 2
-      - originConversationID: 5
-        originDialogueID: 1
-        destinationConversationID: 5
-        destinationDialogueID: 3
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -314,65 +308,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 375
-        y: 162
-        width: 160
-        height: 30
-    - id: 3
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 'Merhaba
-
-'
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 5
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 5
-        originDialogueID: 3
-        destinationConversationID: 5
-        destinationDialogueID: 4
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 87
-        y: 179
+        x: 156
+        y: 169
         width: 160
         height: 30
     - id: 4
@@ -398,8 +335,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "A\u015F\u0131r\u0131 evde kalmay\u0131 seiyorum. Evde olmak benim
-          i\xE7in bir ya\u015Fam tarz\u0131ndan da fazlas\u0131"
+        value: "Bana yumu\u015Fak huylu biri diyebilirsiniz. Bir oyun st\xFCdyosunda
+          \xE7al\u0131\u015F\u0131yorum, bu y\xFCzden olduk\xE7a me\u015Fgul\xFCm"
         type: 0
         typeString: 
       - title: Sequence
@@ -421,8 +358,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 227
-        y: 293
+        x: 158
+        y: 247
         width: 160
         height: 30
     entryGroups: []
@@ -552,7 +489,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: selam
+        value: "Selam, Benim ad\u0131m \"ad\" \"soyad\"."
         type: 0
         typeString: 
       - title: Sequence
@@ -573,12 +510,6 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      - originConversationID: 6
-        originDialogueID: 1
-        destinationConversationID: 6
-        destinationDialogueID: 3
-        isConnector: 0
-        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -586,8 +517,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 151
-        y: 97
+        x: 152
+        y: 96
         width: 160
         height: 30
     - id: 2
@@ -643,65 +574,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 354
-        y: 187
-        width: 160
-        height: 30
-    - id: 3
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: 'Merhaba
-
-'
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 6
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 6
-        originDialogueID: 3
-        destinationConversationID: 6
-        destinationDialogueID: 4
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 68
-        y: 225
+        x: 151
+        y: 164
         width: 160
         height: 30
     - id: 4
@@ -727,7 +601,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Ben sadece uyumak uyumak ve daha fazla uyumak istiyorum
+        value: "Sakin bir hayat tarz\u0131m var. Taksi \u015Fof\xF6r\xFC olarak \xE7al\u0131\u015F\u0131yorum
+          ve bo\u015F zaman\u0131m var"
         type: 0
         typeString: 
       - title: Sequence
@@ -749,8 +624,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 255
-        y: 315
+        x: 152
+        y: 246
         width: 160
         height: 30
     entryGroups: []

@@ -35,28 +35,6 @@ MonoBehaviour:
     underline: 0
   baseID: 1
   actors:
-  - id: 1
-    fields:
-    - title: Name
-      value: Player
-      type: 0
-      typeString: 
-    - title: Pictures
-      value: '[]'
-      type: 3
-      typeString: CustomFieldType_Files
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-    - title: IsPlayer
-      value: True
-      type: 2
-      typeString: CustomFieldType_Boolean
-    portrait: {fileID: 0}
-    spritePortrait: {fileID: 0}
-    alternatePortraits: []
-    spritePortraits: []
   - id: 2
     fields:
     - title: Name
@@ -73,6 +51,28 @@ MonoBehaviour:
       typeString: 
     - title: IsPlayer
       value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    portrait: {fileID: 0}
+    spritePortrait: {fileID: 0}
+    alternatePortraits: []
+    spritePortraits: []
+  - id: 1
+    fields:
+    - title: Name
+      value: Player
+      type: 0
+      typeString: 
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
+    - title: IsPlayer
+      value: True
       type: 2
       typeString: CustomFieldType_Boolean
     portrait: {fileID: 0}
@@ -221,7 +221,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Ayn\u0131 zamanda d\xFCnyan\u0131n her yerini  gezen bir gezginim\n"
+        value: "Zaman\u0131m\u0131 fitness ve y\xFCr\xFCy\xFC\u015F yaparak ge\xE7irmeyi
+          seviyorum.\n"
         type: 0
         typeString: 
       - title: Sequence
@@ -374,7 +375,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Kafelerde tak\u0131lmak benim i\xE7in ya\u015Fam gereklili\u011Fi\n"
+        value: "Bo\u015F zamanlar\u0131m\u0131n \xE7o\u011Funu kamp yaparak ve maceraya
+          at\u0131larak ge\xE7iriyorum.\n"
         type: 0
         typeString: 
       - title: Sequence
@@ -397,7 +399,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 168
-        y: 93
+        y: 92
         width: 160
         height: 30
     entryGroups: []
