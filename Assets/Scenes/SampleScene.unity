@@ -1803,7 +1803,6 @@ Transform:
   - {fileID: 1884924422}
   - {fileID: 1420747680}
   - {fileID: 460589041}
-  - {fileID: 1180997014}
   m_Father: {fileID: 1134078611}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4637,9 +4636,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parallaxMultiplierX: 0.2
   parallaxMultiplierY: 0.1
-  maxOffsetX: 5
+  maxOffsetX: 3
   maxOffsetY: 3
-  smoothSpeed: 5
+  smoothSpeed: 3
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -7863,6 +7862,7 @@ Transform:
   m_Children:
   - {fileID: 87262282}
   - {fileID: 143930154}
+  - {fileID: 1180997014}
   - {fileID: 1449702302}
   - {fileID: 1161377995}
   m_Father: {fileID: 0}
@@ -7984,7 +7984,7 @@ Transform:
   - {fileID: 251169470}
   - {fileID: 2040692667}
   m_Father: {fileID: 1134078611}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1180997013
 GameObject:
@@ -8015,8 +8015,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 143930154}
-  m_RootOrder: 4
+  m_Father: {fileID: 1134078611}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1180997015
 SpriteRenderer:
@@ -9280,7 +9280,7 @@ Transform:
   - {fileID: 627191189}
   - {fileID: 2127586092}
   m_Father: {fileID: 1134078611}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1449702303
 MonoBehaviour:
