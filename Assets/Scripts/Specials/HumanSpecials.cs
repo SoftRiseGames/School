@@ -17,9 +17,10 @@ public class Humans
     public int personality;
     public int hobbies;
 
-    
+
     //personality için 1 en enerjik 3 en tembel
     //hobiler için 1 indoor, 2 ev insaný
+   
 
 }
 public class HumanSpecials : MonoBehaviour
@@ -29,7 +30,7 @@ public class HumanSpecials : MonoBehaviour
     public int indexcounter;
     public TextMeshProUGUI personalityText;
     [SerializeField] Sprite face;
-    
+    int humanchecktrue = 0;
     void Start()
     {
         HumanPersonalities();
@@ -85,6 +86,8 @@ public class HumanSpecials : MonoBehaviour
     {
         string sprite = JsonUtility.ToJson(human);
         indexcounter++;
+        humanchecktrue = 1;
+        PlayerPrefs.SetInt("humanchecktrue", humanchecktrue);
         PlayerPrefs.SetInt("humanCount", indexcounter);
         File.WriteAllText(Application.dataPath + "/JsonHumanFolder/jsondata" + indexcounter.ToString() + ".json", sprite);
     }

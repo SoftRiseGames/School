@@ -12,7 +12,9 @@ public class AnimalGenerator : MonoBehaviour
     int ControlIndex = -1;
     public Button acceptButton;
     public Button cancelButton;
+    public Button BackButton;
     int accept = 0;
+    int animalchecktrue = 0; 
     private void Start()
     {
         onOpenButtons = Random.Range(1, buttons.Count);
@@ -41,6 +43,8 @@ public class AnimalGenerator : MonoBehaviour
             buttons[ControlIndex].gameObject.SetActive(false);
             animalIndexControl();
         });
+        animalchecktrue = 1;
+        PlayerPrefs.SetInt("animalchecktrue", animalchecktrue);
     }
     public void CancelAnimal()
     {
@@ -50,7 +54,8 @@ public class AnimalGenerator : MonoBehaviour
             buttons[ControlIndex].gameObject.SetActive(false);
             animalIndexControl();
         });
-        
+        animalchecktrue = 1;
+        PlayerPrefs.SetInt("animalchecktrue", animalchecktrue);
     }
     void animalIndexControl()
     {
@@ -68,6 +73,7 @@ public class AnimalGenerator : MonoBehaviour
             Debug.Log("a");
             acceptButton.gameObject.GetComponent<Button>().interactable = false;
             cancelButton.gameObject.GetComponent<Button>().interactable = false;
+            BackButton.gameObject.SetActive(true);
         }
     }
 }

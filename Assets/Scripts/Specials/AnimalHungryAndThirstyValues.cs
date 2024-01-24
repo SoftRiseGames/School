@@ -12,6 +12,8 @@ public class AnimalHungryAndThirstyValues : MonoBehaviour
     
     [SerializeField] FoodFill foodData;
     [SerializeField] WaterFill waterData;
+
+    int foodchecktrue = 0;
     void Start()
     {
         if (PlayerPrefs.HasKey("HungryValue"+this.gameObject.name))
@@ -30,10 +32,6 @@ public class AnimalHungryAndThirstyValues : MonoBehaviour
             ThirstyValue = Random.Range(50, 100);
             PlayerPrefs.SetInt("ThirstyValue" + this.gameObject.name, ThirstyValue);
         }
-            
-
-
-        
     }
     
 
@@ -48,6 +46,9 @@ public class AnimalHungryAndThirstyValues : MonoBehaviour
                 foodData.foodLevel = 0;
             if (HungryValue < 0)
                 HungryValue = 0;
+
+            foodchecktrue = 1;
+            PlayerPrefs.SetInt("foodchecktrue", foodchecktrue);
             PlayerPrefs.SetInt("HungryValue" + this.gameObject.name, HungryValue);
         }
         
@@ -65,6 +66,8 @@ public class AnimalHungryAndThirstyValues : MonoBehaviour
 
             if (ThirstyValue < 0)
                 ThirstyValue = 0;
+            foodchecktrue = 1;
+            PlayerPrefs.SetInt("foodchecktrue", foodchecktrue);
             PlayerPrefs.SetInt("ThirstyValue" + this.gameObject.name, ThirstyValue);
         }
 

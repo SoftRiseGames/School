@@ -38,31 +38,31 @@ public class HumanConversationSettings : MonoBehaviour
     }
     public void ConversationEnergeticHuman()
     {
-        int randomintscan = Random.Range(1, 3);
+        int randomintscan = Random.Range(1, 8);
         this.gameObject.GetComponent<DialogueSystemTrigger>().conversation = "Energetic" + " " + randomintscan.ToString();
   
     }
     public void ConversationNeutralHuman()
     {
-        int randomintscan = Random.Range(1, 3);
+        int randomintscan = Random.Range(1, 7);
         this.gameObject.GetComponent<DialogueSystemTrigger>().conversation = "Neutral" + " " + randomintscan.ToString();
 
     }
     public void ConversationCalmHuman()
     {
-        int randomintscan = Random.Range(1, 3);
+        int randomintscan = Random.Range(1, 8);
         this.gameObject.GetComponent<DialogueSystemTrigger>().conversation = "Calm" + " " + randomintscan.ToString();
      
     }
     public void IndoorHuman()
     {
-        int randomintscan = Random.Range(1, 3);
+        int randomintscan = Random.Range(1, 6);
         this.gameObject.GetComponent<DialogueSystemTrigger>().conversation = "Indoor" + " " + randomintscan.ToString();
     
     }
     public void OutdoorHuman()
     {
-        int randomintscan = Random.Range(1, 3);
+        int randomintscan = Random.Range(1, 9);
         this.gameObject.GetComponent<DialogueSystemTrigger>().conversation = "Outdoor" + " " + randomintscan.ToString();
 
     }
