@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using DG.Tweening;
 public class ButtonManager : MonoBehaviour
 {
     public GameObject ScreenPage;
@@ -23,8 +24,8 @@ public class ButtonManager : MonoBehaviour
     }
     public void OpenPage()
     {
-        MainMenu.SetActive(false);
         ScreenPage.SetActive(true);
+        ScreenPage.transform.DOScale(.39f, .5f).OnComplete(() => MainMenu.SetActive(false));
     }
     public void ClosePage()
     {
