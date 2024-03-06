@@ -9309,9 +9309,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parallaxMultiplierX: 0.1
   parallaxMultiplierY: 0.025
-  maxOffsetX: 4
-  maxOffsetY: 3
-  smoothSpeed: 5
+  maxOffsetX: 0.4
+  maxOffsetY: 0.3
+  smoothSpeed: 0.9
 --- !u!1 &1451179822
 GameObject:
   m_ObjectHideFlags: 0

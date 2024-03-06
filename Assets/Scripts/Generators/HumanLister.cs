@@ -75,7 +75,6 @@ public class HumanLister : MonoBehaviour
             dedectedGameobject = null;
             isPass = false;
         }
-        Debug.Log(totalCounter);
         slider.value = currency.Amount;
       
     }
