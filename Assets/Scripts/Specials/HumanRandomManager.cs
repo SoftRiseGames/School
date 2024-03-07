@@ -14,11 +14,16 @@ public class Data
     public List<Sprite> hair;
     public List<Sprite> mouth;
     public List<Sprite> nose;
+    
+}
+[System.Serializable]
+public class NameSurname
+{
     public List<string> name;
     public List<string> surname;
-    
 }
 public class HumanRandomManager : MonoBehaviour   
 {
     public List<Data> humanData;
+    public List<NameSurname> nameAndSurname;
 }

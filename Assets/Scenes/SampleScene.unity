@@ -7216,7 +7216,15 @@ PrefabInstance:
       value: RandomManager
       objectReference: {fileID: 0}
     - target: {fileID: 3637803959085943219, guid: d9ec1ad96c2669b4184390a96ce0bfcf, type: 3}
+      propertyPath: nameAndSurname.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3637803959085943219, guid: d9ec1ad96c2669b4184390a96ce0bfcf, type: 3}
       propertyPath: humanData.Array.data[0].surname.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3637803959085943219, guid: d9ec1ad96c2669b4184390a96ce0bfcf, type: 3}
+      propertyPath: nameAndSurname.Array.data[0].name.Array.size
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
