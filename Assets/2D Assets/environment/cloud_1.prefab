@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeedMin: 1
-  moveSpeedMax: 1.5
+  moveSpeedMax: 1.3
   fadeInTimeMin: 3
   fadeInTimeMax: 4
   fadeOutTimeMin: 2
