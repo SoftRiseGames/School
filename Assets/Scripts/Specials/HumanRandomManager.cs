@@ -14,6 +14,8 @@ public class Data
     public List<Sprite> hair;
     public List<Sprite> mouth;
     public List<Sprite> nose;
+    public List<string> name;
+    public List<string> surname;
     
 }
 public class HumanRandomManager : MonoBehaviour   
