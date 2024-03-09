@@ -12,6 +12,7 @@ public class DragAndDrop : MonoBehaviour
     }
     private void OnMouseDown()
     {
+        transform.position = Vector2.MoveTowards(transform.position, Camera.main.ScreenToWorldPoint(new Vector2(Input.mousePosition.x, Input.mousePosition.y)), 2f);
         offset = transform.position - Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.DOScale(.2f, 0.1f);
         SetSortingOrder(lastClickedOrder + 100);
@@ -20,6 +21,7 @@ public class DragAndDrop : MonoBehaviour
     private void OnMouseDrag()
     {
         transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + offset;
+        
     }
    
     private void OnMouseUp()
