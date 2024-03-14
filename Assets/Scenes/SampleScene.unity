@@ -5086,8 +5086,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 627191188}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.18, y: 3.59, z: 0}
-  m_LocalScale: {x: 1.145875, y: 1.02, z: 1.0029}
+  m_LocalPosition: {x: -6.03, y: 3.56, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1.0029}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1449702302}
@@ -5172,18 +5172,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.42276043, y: -0.009552717}
+  m_Offset: {x: -0.33027864, y: 0.05210197}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.47, y: 7.43}
+    oldSize: {x: 3.91, y: 7.58}
     newSize: {x: 3.45, y: 7.4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.2955194, y: 5.967074}
+  m_Size: {x: 4.4804835, y: 6.0903835}
   m_EdgeRadius: 0
 --- !u!1 &644637196
 GameObject:
@@ -5774,7 +5774,7 @@ Transform:
   m_GameObject: {fileID: 824586247}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.12, y: -2.62, z: 0.06}
-  m_LocalScale: {x: 2.384365, y: 2.073361, z: 1.0366805}
+  m_LocalScale: {x: 2, y: 2, z: 1.0366805}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1449702302}
@@ -7582,7 +7582,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1110582472}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.87, y: 4.24, z: 0}
+  m_LocalPosition: {x: 0.99, y: 4.18, z: 0}
   m_LocalScale: {x: 1.1681249, y: 1.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8026,7 +8026,7 @@ Transform:
   m_GameObject: {fileID: 1196491883}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1, y: 1, z: 0}
-  m_LocalScale: {x: 1.1125, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1449702302}
