@@ -38,7 +38,7 @@ public class AnimalGenerator : MonoBehaviour
         buttons[ControlIndex].gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().DOFade(0, 1);
         accept = accept + 1;
         PlayerPrefs.SetInt("accept", accept);
-        buttons[ControlIndex].gameObject.GetComponent<SpriteRenderer>().DOFade(0, 1).OnComplete(() =>
+        buttons[ControlIndex].gameObject.transform.GetChild(1).GetComponent<SpriteRenderer>().DOFade(0, 1).OnUpdate(() => { buttons[ControlIndex].gameObject.transform.GetChild(2).GetComponent<SpriteRenderer>().DOFade(0, 1); buttons[ControlIndex].gameObject.transform.GetChild(3).GetComponent<SpriteRenderer>().DOFade(0, 1); }).OnComplete(() =>
         {
             buttons[ControlIndex].gameObject.SetActive(false);
             animalIndexControl();
@@ -49,7 +49,7 @@ public class AnimalGenerator : MonoBehaviour
     public void CancelAnimal()
     {
         buttons[ControlIndex].gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().DOFade(0, 1);
-        buttons[ControlIndex].gameObject.GetComponent<SpriteRenderer>().DOFade(0, 1).OnComplete(() =>
+        buttons[ControlIndex].gameObject.transform.GetChild(1).GetComponent<SpriteRenderer>().DOFade(0, 1).OnUpdate(() => { buttons[ControlIndex].gameObject.transform.GetChild(2).GetComponent<SpriteRenderer>().DOFade(0, 1); buttons[ControlIndex].gameObject.transform.GetChild(3).GetComponent<SpriteRenderer>().DOFade(0, 1); }).OnComplete(() =>
         {
             buttons[ControlIndex].gameObject.SetActive(false);
             animalIndexControl();
@@ -65,8 +65,9 @@ public class AnimalGenerator : MonoBehaviour
         {
             buttons[ControlIndex].gameObject.SetActive(true);
             buttons[ControlIndex].gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().DOFade(1, 1);
-            buttons[ControlIndex].gameObject.GetComponent<SpriteRenderer>().DOFade(1, 1);
+            buttons[ControlIndex].gameObject.transform.GetChild(1).GetComponent<SpriteRenderer>().DOFade(1, 1).OnUpdate(() => { buttons[ControlIndex].gameObject.transform.GetChild(2).GetComponent<SpriteRenderer>().DOFade(1, 1); buttons[ControlIndex].gameObject.transform.GetChild(3).GetComponent<SpriteRenderer>().DOFade(1, 1); });
             
+
         }
         if(ControlIndex == onOpenButtons)
         {

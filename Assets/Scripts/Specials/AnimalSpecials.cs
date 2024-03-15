@@ -6,6 +6,11 @@ using UnityEngine.UI;
 [System.Serializable]
 public class AnimalData
 {
+    public int Animaltype;
+    public int nose;
+    public int eyes;
+    public int body;
+    //
     public int hungryVariable;
     public int thirstyVariable;
     public bool isIll;
@@ -21,6 +26,7 @@ public class AnimalData
 public class AnimalSpecials : MonoBehaviour
 {
     public AnimalData animalclasses = new AnimalData();
+    public HumanRandomManager randomizer;
     int indexcounter;
     [SerializeField] int ChanceToIll;
     [SerializeField] int ChanceToHungrySpeed;
@@ -28,6 +34,8 @@ public class AnimalSpecials : MonoBehaviour
     private void Start()
     {
         AnimalPersonalities();
+        animalTypeSelection();
+        animalVisualSettings();
     }
 
     public void AnimalPersonalities()
@@ -37,6 +45,27 @@ public class AnimalSpecials : MonoBehaviour
 
         animalclasses.personality = randompersonality;
         animalclasses.hobbies = randomhobbie;
+    }
+    public void animalTypeSelection()
+    {
+        int randomAnimalType = Random.Range(0, randomizer.animalData.Count);
+        animalclasses.Animaltype = randomAnimalType;
+        Debug.Log(animalclasses.Animaltype);
+    }
+    public void animalVisualSettings()
+    {
+        int animalTypeRandom = Random.Range(0, randomizer.animalData[animalclasses.Animaltype].animaltype.Count);
+        animalclasses.nose = Random.Range(0, randomizer.animalData[animalclasses.Animaltype].animaltype[animalTypeRandom].nose.Count);
+        animalclasses.eyes = Random.Range(0, randomizer.animalData[animalclasses.Animaltype].animaltype[animalTypeRandom].eyes.Count);
+        animalclasses.body = Random.Range(0, randomizer.animalData[animalclasses.Animaltype].animaltype[animalTypeRandom].body.Count);
+
+
+        Debug.Log(animalTypeRandom);
+        
+        gameObject.transform.GetChild(1).transform.GetComponent<SpriteRenderer>().sprite = randomizer.animalData[animalclasses.Animaltype].animaltype[animalTypeRandom].body[animalclasses.body];
+        gameObject.transform.GetChild(2).transform.GetComponent<SpriteRenderer>().sprite = randomizer.animalData[animalclasses.Animaltype].animaltype[animalTypeRandom].nose[animalclasses.nose];
+        gameObject.transform.GetChild(3).transform.GetComponent<SpriteRenderer>().sprite = randomizer.animalData[animalclasses.Animaltype].animaltype[animalTypeRandom].eyes[animalclasses.eyes];
+        
     }
     private void Update()
     {

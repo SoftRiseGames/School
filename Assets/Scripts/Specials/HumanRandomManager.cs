@@ -22,8 +22,21 @@ public class NameSurname
     public List<string> name;
     public List<string> surname;
 }
+[System.Serializable]
+public class animalData
+{
+    public List<animalType> animaltype;
+}
+[System.Serializable]
+public class animalType
+{
+    public List<Sprite> nose;
+    public List<Sprite> body;
+    public List<Sprite> eyes;
+}
 public class HumanRandomManager : MonoBehaviour   
 {
     public List<Data> humanData;
+    public List<animalData> animalData;
     public List<NameSurname> nameAndSurname;
 }
