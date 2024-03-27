@@ -34,7 +34,7 @@ public class animalType
     public List<Sprite> body;
     public List<Sprite> eyes;
 }
-public class HumanRandomManager : MonoBehaviour   
+public class RandomManager : MonoBehaviour   
 {
     public List<Data> humanData;
     public List<animalData> animalData;

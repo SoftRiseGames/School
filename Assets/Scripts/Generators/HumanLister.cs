@@ -23,7 +23,7 @@ public class HumanLister : MonoBehaviour
     public int hobby;
     public string[] textStr;
     public HumanConversationSettings humanConversationTexts;
-    public HumanRandomManager randomManager;
+    public RandomManager randomManager;
     public GameObject dedectedGameobject;
     bool isPass;
     public CurrencyData currency; //b

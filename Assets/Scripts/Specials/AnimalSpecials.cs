@@ -6,7 +6,8 @@ using UnityEngine.UI;
 [System.Serializable]
 public class AnimalData
 {
-    public int Animaltype;
+    public int AnimalHighType;
+    public int AnimalLowType;
     public int nose;
     public int eyes;
     public int body;
@@ -26,7 +27,7 @@ public class AnimalData
 public class AnimalSpecials : MonoBehaviour
 {
     public AnimalData animalclasses = new AnimalData();
-    public HumanRandomManager randomizer;
+    public RandomManager randomizer;
     int indexcounter;
     [SerializeField] int ChanceToIll;
     [SerializeField] int ChanceToHungrySpeed;
@@ -49,22 +50,24 @@ public class AnimalSpecials : MonoBehaviour
     public void animalTypeSelection()
     {
         int randomAnimalType = Random.Range(0, randomizer.animalData.Count);
-        animalclasses.Animaltype = randomAnimalType;
-        Debug.Log(animalclasses.Animaltype);
+        animalclasses.AnimalHighType = randomAnimalType;
+        int animalTypeRandom = Random.Range(0, randomizer.animalData[animalclasses.AnimalHighType].animaltype.Count);
+        animalclasses.AnimalLowType = animalTypeRandom;
     }
     public void animalVisualSettings()
     {
-        int animalTypeRandom = Random.Range(0, randomizer.animalData[animalclasses.Animaltype].animaltype.Count);
-        animalclasses.nose = Random.Range(0, randomizer.animalData[animalclasses.Animaltype].animaltype[animalTypeRandom].nose.Count);
-        animalclasses.eyes = Random.Range(0, randomizer.animalData[animalclasses.Animaltype].animaltype[animalTypeRandom].eyes.Count);
-        animalclasses.body = Random.Range(0, randomizer.animalData[animalclasses.Animaltype].animaltype[animalTypeRandom].body.Count);
+       
+        animalclasses.nose = Random.Range(0, randomizer.animalData[animalclasses.AnimalHighType].animaltype[animalclasses.AnimalLowType].nose.Count);
+        animalclasses.eyes = Random.Range(0, randomizer.animalData[animalclasses.AnimalHighType].animaltype[animalclasses.AnimalLowType].eyes.Count);
+        animalclasses.body = Random.Range(0, randomizer.animalData[animalclasses.AnimalHighType].animaltype[animalclasses.AnimalLowType].body.Count);
+       
 
 
-        Debug.Log(animalTypeRandom);
+        Debug.Log(animalclasses.AnimalLowType);
         
-        gameObject.transform.GetChild(1).transform.GetComponent<SpriteRenderer>().sprite = randomizer.animalData[animalclasses.Animaltype].animaltype[animalTypeRandom].body[animalclasses.body];
-        gameObject.transform.GetChild(2).transform.GetComponent<SpriteRenderer>().sprite = randomizer.animalData[animalclasses.Animaltype].animaltype[animalTypeRandom].nose[animalclasses.nose];
-        gameObject.transform.GetChild(3).transform.GetComponent<SpriteRenderer>().sprite = randomizer.animalData[animalclasses.Animaltype].animaltype[animalTypeRandom].eyes[animalclasses.eyes];
+        gameObject.transform.GetChild(1).transform.GetComponent<SpriteRenderer>().sprite = randomizer.animalData[animalclasses.AnimalHighType].animaltype[animalclasses.AnimalLowType].body[animalclasses.body];
+        gameObject.transform.GetChild(2).transform.GetComponent<SpriteRenderer>().sprite = randomizer.animalData[animalclasses.AnimalHighType].animaltype[animalclasses.AnimalLowType].nose[animalclasses.nose];
+        gameObject.transform.GetChild(3).transform.GetComponent<SpriteRenderer>().sprite = randomizer.animalData[animalclasses.AnimalHighType].animaltype[animalclasses.AnimalLowType].eyes[animalclasses.eyes];
         
     }
     private void Update()

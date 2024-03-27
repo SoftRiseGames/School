@@ -26,7 +26,7 @@ public class Humans
 public class HumanSpecials : MonoBehaviour
 {
     public Humans human = new Humans();
-    public HumanRandomManager randomizerList;
+    public RandomManager randomizerList;
     public int indexcounter;
     public TextMeshProUGUI personalityText;
     [SerializeField] Sprite face;

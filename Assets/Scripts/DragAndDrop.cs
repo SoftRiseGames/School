@@ -35,7 +35,11 @@ public class DragAndDrop : MonoBehaviour
     private void SetSortingOrder(int order)
     {
         GetComponent<SpriteRenderer>().sortingOrder = order;
-        transform.GetChild(0).GetComponent<SpriteRenderer>().sortingOrder = order - 2;
+        transform.GetChild(0).GetComponent<SpriteRenderer>().sortingOrder = order - 3;
         transform.GetChild(1).GetComponent<Canvas>().sortingOrder = order - 1;
+        transform.GetChild(2).GetComponent<SpriteRenderer>().sortingOrder = order - 2;
+        transform.GetChild(3).GetComponent<SpriteRenderer>().sortingOrder = order - 1;
+        transform.GetChild(4).GetComponent<SpriteRenderer>().sortingOrder = order - 1;
     }
+    
 }
