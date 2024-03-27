@@ -645,7 +645,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8437196958035195683
 Transform:
   m_ObjectHideFlags: 0
@@ -693,7 +693,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animalData:
-    Animaltype: 0
+    AnimalHighType: 0
+    AnimalLowType: 0
     nose: 0
     eyes: 0
     body: 0
@@ -702,8 +703,12 @@ MonoBehaviour:
     isIll: 0
     personality: 0
     hobbies: 0
+  RandomManager: {fileID: 0}
   kisilik: {fileID: 740007463}
   evcillik: {fileID: 181709428}
+  body: {fileID: 5318826235036508716}
+  eyes: {fileID: 1637949581087399976}
+  nose: {fileID: 8053630463403118734}
 --- !u!114 &9149112785600859916
 MonoBehaviour:
   m_ObjectHideFlags: 0
