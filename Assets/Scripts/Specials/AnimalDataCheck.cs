@@ -28,7 +28,7 @@ public class AnimalDataCheck : MonoBehaviour
             evcillik.text = "Dýþarý hayvaný";
 
         DataChecker();
-        Debug.Log(animalData.personality);
+        
     }
     private void Update()
     {

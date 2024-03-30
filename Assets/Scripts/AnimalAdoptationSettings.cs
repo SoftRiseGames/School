@@ -12,11 +12,20 @@ public class AnimalAdoptationSettings : MonoBehaviour
     public bool isControlCheck;
     void LoopSync()
     {
-        for (int indexcontrol = 0; indexcontrol < textStr.Length; indexcontrol++)
+        for (int indexcontrol = 0; indexcontrol <= customer.Count; indexcontrol++)
         {
-            customer[indexcontrol].gameObject.SetActive(true);
-            AnimalData data = JsonUtility.FromJson<AnimalData>(textStr[indexcontrol].ToString());
-            customer[indexcontrol].GetComponent<AnimalDataCheck>().animalData = data;
+            if (indexcontrol < textStr.Length)
+            {
+                customer[indexcontrol].gameObject.SetActive(true);
+                AnimalData data = JsonUtility.FromJson<AnimalData>(textStr[indexcontrol].ToString());
+                customer[indexcontrol].GetComponent<AnimalDataCheck>().animalData = data;
+            }
+            else if(indexcontrol>= textStr.Length)
+            {
+                int degree = customer.Count;
+                customer.RemoveAt(degree-1);
+            }
+            
         }
     }
     public void isControlCheckFalse()
@@ -27,7 +36,7 @@ public class AnimalAdoptationSettings : MonoBehaviour
     {
         isControlCheck = true;
     }
-    void Start()
+    private void Awake()
     {
 #if UNITY_EDITOR
         LoadJsonFiles(Application.dataPath + "/JsonFolder");
@@ -36,6 +45,7 @@ public class AnimalAdoptationSettings : MonoBehaviour
 #endif
         LoopSync();
     }
+    
     public void LoadJsonFiles(string folderPath)
     {
         try

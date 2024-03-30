@@ -545,8 +545,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "ki\u015Fi 23 ya\u015F\u0131nda"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 33a67d6c000163446a0402c0bd98112a, type: 2}
+  m_sharedMaterial: {fileID: 2655019362303073881, guid: 33a67d6c000163446a0402c0bd98112a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
