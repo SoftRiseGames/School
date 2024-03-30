@@ -855,6 +855,7 @@ MonoBehaviour:
   personality: 2
   hobby: 0
   textStr: []
+  animalui: {fileID: 750695700}
   humanConversationTexts: {fileID: 670886456}
   randomManager: {fileID: 815025458}
   dedectedGameobject: {fileID: 0}
@@ -2215,7 +2216,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &670886455
 Transform:
   m_ObjectHideFlags: 0
@@ -3262,6 +3263,10 @@ PrefabInstance:
       objectReference: {fileID: 815025458}
     - target: {fileID: 7223153963991637566, guid: 02dd7caa8b29a5148898a7271671ecb5, type: 3}
       propertyPath: m_Name
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7223153963991637566, guid: 02dd7caa8b29a5148898a7271671ecb5, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8437196958035195683, guid: 02dd7caa8b29a5148898a7271671ecb5, type: 3}
@@ -5807,7 +5812,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 125852, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 425660, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: m_RootOrder

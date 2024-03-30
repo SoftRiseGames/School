@@ -6,6 +6,8 @@ public class DragAndDrop : MonoBehaviour
     private Vector3 offset;
     private static int lastClickedOrder;
     public AnimalUILister animalLister;
+    public bool isMove;
+    public bool isDragging;
     private void Start()
     {
         lastClickedOrder = this.gameObject.GetComponent<SpriteRenderer>().sortingOrder;
@@ -17,6 +19,7 @@ public class DragAndDrop : MonoBehaviour
         transform.DOScale(.2f, 0.1f);
         SetSortingOrder(lastClickedOrder + 100);
         animalLister.ObjectClickControl = int.Parse(gameObject.name);
+        isMove = true;
     }
 
     private void OnMouseDrag()
@@ -30,7 +33,7 @@ public class DragAndDrop : MonoBehaviour
         transform.DOScale(.3213328f, 0.1f);
         SetSortingOrder(lastClickedOrder + 3);
         lastClickedOrder = GetComponent<SpriteRenderer>().sortingOrder;
-        
+        isMove = false;
     }
 
     private void SetSortingOrder(int order)

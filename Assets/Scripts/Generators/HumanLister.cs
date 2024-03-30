@@ -22,6 +22,7 @@ public class HumanLister : MonoBehaviour
    
     public int hobby;
     public string[] textStr;
+    public AnimalUILister animalui;
     public HumanConversationSettings humanConversationTexts;
     public RandomManager randomManager;
     public GameObject dedectedGameobject;
@@ -67,7 +68,10 @@ public class HumanLister : MonoBehaviour
     {
         if (Input.GetMouseButtonUp(0) && isPass)
         {
+            //
+            RepositionNamer();
             dedectedGameobject.gameObject.SetActive(false);
+            animalui.animalObject.RemoveAt(int.Parse(dedectedGameobject.gameObject.name));
             PlayerPrefs.DeleteKey("HungryValue" + dedectedGameobject.name);
             PlayerPrefs.DeleteKey("ThirstyValue" + dedectedGameobject.name);
             Generate();
@@ -79,6 +83,20 @@ public class HumanLister : MonoBehaviour
       
     }
 
+    void RepositionNamer()
+    {
+        int dedected = int.Parse(dedectedGameobject.name);
+        foreach (GameObject i in animalui.animalObject)
+        {
+            int namer = int.Parse(i.name);
+            if (namer > dedected && (dedected != animalui.animalObject.Count))
+            {
+                namer = namer - 1;
+                i.name = namer.ToString();
+            }
+        }
+       
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         isPass = true;
