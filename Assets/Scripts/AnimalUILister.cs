@@ -8,25 +8,28 @@ public class AnimalUILister : MonoBehaviour
     [SerializeField] List<Vector2> objectTransforms;
     public int ObjectClickControl;
     public GameObject animalAdopt;
-
-    void Start()
+    private void Awake()
     {
         int limiter = animalAdopt.GetComponent<AnimalAdoptationSettings>().textStr.Length;
-   
-        for (int i = 0; i<=animalObject.Count ; i++)
+
+        for (int i = 0; i <= animalObject.Count; i++)
         {
             if (i < limiter)
             {
                 objectTransforms.Add(animalObject[i].transform.position);
                 animalObject[i].name = i.ToString();
             }
-            else if(i>= limiter)
+            else if (i >= limiter)
             {
                 int degree = animalObject.Count;
                 animalObject.RemoveAt(degree - 1);
             }
-            
+
         }
+    }
+    void Start()
+    {
+        
     }
 
     // Update is called once per frame
