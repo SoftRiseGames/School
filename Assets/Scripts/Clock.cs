@@ -22,9 +22,11 @@ public class Clock : MonoBehaviour
         {
             hoursString = "17";
             minutesString = "00";
+            Debug.Log("Day End");
+            DayManager.instance.dayEnd = true;
             enabled = false;
         }
-
+        
         clockText.text = hoursString + ":" + minutesString;
         
     }
