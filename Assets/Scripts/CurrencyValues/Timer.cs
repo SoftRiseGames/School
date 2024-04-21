@@ -32,7 +32,7 @@ public class Timer : MonoBehaviour
         Time = 10;
     }
 
-
+   
     public void DecreaseTimer()
     {
         Time--;

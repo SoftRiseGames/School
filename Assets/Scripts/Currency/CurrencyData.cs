@@ -24,5 +24,5 @@ public class CurrencyData :ScriptableObject
             OnAmountChanged?.Invoke();
         }
     }
-    public int _amount;
+    private int _amount;
 }
