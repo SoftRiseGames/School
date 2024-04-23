@@ -861,7 +861,7 @@ MonoBehaviour:
   dedectedGameobject: {fileID: 0}
   currency: {fileID: 11400000, guid: 4e68e33aa1568c44da213572e9536f6b, type: 2}
   slider: {fileID: 16826993}
-  uiController: {fileID: 0}
+  totalCounterText: {fileID: 1653368003}
 --- !u!61 &197006621
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -5,6 +5,7 @@ using System;
 using System.IO;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using TMPro;
 
 public class HumanLister : MonoBehaviour
 {
@@ -29,6 +30,7 @@ public class HumanLister : MonoBehaviour
     bool isPass;
     public CurrencyData currency; //b
     public Slider slider;//b
+    [SerializeField] TextMeshProUGUI totalCounterText;
 
     int totalCounter;
     
@@ -135,6 +137,9 @@ public class HumanLister : MonoBehaviour
                 Debug.Log("kotu eslesme");
                 totalCounter -= 20;
             }
+            totalCounterText.gameObject.SetActive(true);
+            totalCounterText.text = totalCounter.ToString();
+
         }
     }
     private void OnTriggerExit2D(Collider2D collision)

@@ -24,5 +24,5 @@ public class CurrencyData :ScriptableObject
             OnAmountChanged?.Invoke();
         }
     }
-    private int _amount;
+    [SerializeField] int _amount;
 }
