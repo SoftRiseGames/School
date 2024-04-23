@@ -27,6 +27,7 @@ public class HumanSpecials : MonoBehaviour
 {
     public Humans human = new Humans();
     public RandomManager randomizerList;
+    public GameObject Panels;
     public int indexcounter;
     public TextMeshProUGUI personalityText;
     [SerializeField] Sprite face;
@@ -49,6 +50,10 @@ public class HumanSpecials : MonoBehaviour
         human.hairIndex = Random.Range(0, data.hair.Count);
         human.mouthIndex = Random.Range(0, data.mouth.Count);
         human.noseIndex = Random.Range(0, data.nose.Count);
+    }
+    public void OpenPanel()
+    {
+        Instantiate(Panels,this.gameObject.transform.position,Quaternion.identity);
     }
     public void wave()
     {
