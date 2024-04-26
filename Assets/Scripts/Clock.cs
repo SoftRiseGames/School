@@ -4,7 +4,7 @@ using TMPro;
 public class Clock : MonoBehaviour
 {
     private float _day;
-    private const float RealSecondsPerIngameDay = 5f;
+    private const float RealSecondsPerIngameDay = 500f;
     [SerializeField] private TextMeshProUGUI clockText;
     string hoursString;
     string minutesString;

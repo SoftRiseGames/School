@@ -41,6 +41,7 @@ public class ScreenSystem : MonoBehaviour
         {
             Sites[i].GetComponent<Button>().interactable = true;
         }
+        GetComponent<BoxCollider2D>().enabled = false;
 
     }
     private void Update()
@@ -55,5 +56,6 @@ public class ScreenSystem : MonoBehaviour
         {
             Sites[i].GetComponent<Button>().interactable = false;
         }
+        GetComponent<BoxCollider2D>().enabled = true;
     }
 }
