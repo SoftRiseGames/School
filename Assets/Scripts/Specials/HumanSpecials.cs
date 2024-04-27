@@ -32,10 +32,13 @@ public class HumanSpecials : MonoBehaviour
     public TextMeshProUGUI personalityText;
     [SerializeField] Sprite face;
     int humanchecktrue = 0;
+
     void Start()
     {
         HumanPersonalities();
         SpecialsTextManager();
+        Debug.Log(GameObject.Find("Limits").transform.GetChild(0));
+        
     }
     public void HumanPersonalities()
     {
@@ -54,6 +57,7 @@ public class HumanSpecials : MonoBehaviour
     public void OpenPanel()
     {
         Instantiate(Panels,this.gameObject.transform.position,Quaternion.identity);
+        
     }
     public void wave()
     {

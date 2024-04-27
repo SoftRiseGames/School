@@ -6,7 +6,10 @@ public class PopUpDragDrop : MonoBehaviour
 {
     private bool isDragging = false;
     private Vector3 offset;
-
+    private void Start()
+    {
+        gameObject.transform.parent = GameObject.Find("Limits").transform.GetChild(0);
+    }
     private void OnMouseDown()
     {
         isDragging = true;
