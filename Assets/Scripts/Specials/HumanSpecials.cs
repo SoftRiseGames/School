@@ -37,8 +37,6 @@ public class HumanSpecials : MonoBehaviour
     {
         HumanPersonalities();
         SpecialsTextManager();
-        Debug.Log(GameObject.Find("Limits").transform.GetChild(0));
-        
     }
     public void HumanPersonalities()
     {
