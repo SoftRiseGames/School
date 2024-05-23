@@ -7,10 +7,14 @@ using System.IO;
 public class SceneControl : MonoBehaviour
 {
     int isCarSkipped;
+    
     public void animalAccept()
     {
-        PlayerPrefs.SetInt("isCarSkipped", isCarSkipped);
+        PlayerPrefs.SetInt("isCarSkipped", isCarSkipped); 
         SceneManager.LoadScene(2);
+   
+        
+        
     }
     public void BackMain()
     {
@@ -62,7 +66,7 @@ public class SceneControl : MonoBehaviour
         DeleteJsonFiles(Application.persistentDataPath + "/JsonHumanFolder");
 #endif
         PlayerPrefs.DeleteAll();
-        SceneManager.LoadScene(0);
+        SceneManager.LoadSceneAsync(0);
     }
 
 

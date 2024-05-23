@@ -10,7 +10,8 @@ public class Clock : MonoBehaviour
     [SerializeField] private TextMeshProUGUI clockText;
     string hoursString;
     string minutesString;
-
+    int startHour;
+    int startMinute;
     public static Action AfternoonEvent;
     public static Action NightEvent;
     public static Action CloseEvent;
@@ -22,6 +23,30 @@ public class Clock : MonoBehaviour
 
     private void Start()
     {
+        if (PlayerPrefs.HasKey("hoursString"))
+        {
+            startHour = PlayerPrefs.GetInt("hoursString");
+            Debug.Log("hour data");
+        }
+        else
+        {
+            startHour = 9;
+        }
+
+
+
+        if (PlayerPrefs.HasKey("minutesString"))
+        {
+            startMinute = PlayerPrefs.GetInt("minutesString");
+            Debug.Log("minutedata");
+        }
+        else
+        {
+            startMinute = 00;
+        }
+           
+
+
         firstCarCome = UnityEngine.Random.Range(10, 12);
         secondCarCome = UnityEngine.Random.Range(14, 16);
     }
@@ -29,11 +54,19 @@ public class Clock : MonoBehaviour
     {
         float dayNormalized = _day % 1f;
         float hoursPerDay = 24f;
-        float minutesPerHour = 60f;
+        float minutesPerHour = 60 -startMinute;
 
-        hoursString = Mathf.Floor(9 + dayNormalized * hoursPerDay).ToString("00");
-        minutesString = Mathf.Floor(((dayNormalized * hoursPerDay) % 1f) * minutesPerHour).ToString("00");
+        hoursString = Mathf.Floor(startHour + dayNormalized * hoursPerDay).ToString("00");
+        minutesString = Mathf.Floor( startMinute+((dayNormalized * hoursPerDay) % 1f) * minutesPerHour).ToString("00");
 
+        PlayerPrefs.SetInt("hoursString",int.Parse(hoursString));
+        PlayerPrefs.SetInt("minutesString", int.Parse(minutesString));
+
+        if(int.Parse(minutesString)>= 59)
+        {
+            startMinute = 0;
+        }
+            
         // Saat 17:00 olduðunda döngüyü durdur
         if (int.Parse(hoursString) >= 17)
         {

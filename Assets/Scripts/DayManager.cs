@@ -55,6 +55,8 @@ public class DayManager : MonoBehaviour
         audios.GetComponent<AudioSource>().clip = audios.GetComponent<AudioVoices>().AudioList[0];
         await Task.Delay(100);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        PlayerPrefs.DeleteKey("hoursString");
+        PlayerPrefs.DeleteKey("minutesString");
 
     }
    

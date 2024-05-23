@@ -38,6 +38,8 @@ public class MarketingButtons : MonoBehaviour
                 waterData.waterLevel += waterData.waterLevel + 50;
             if (waterData.waterLevel > 100)
                 waterData.waterLevel = 100;
+
+            PlayerPrefs.SetFloat("waterLevel", waterData.waterLevel);
         }
        
     }
@@ -49,6 +51,8 @@ public class MarketingButtons : MonoBehaviour
                 foodData.foodLevel += foodData.foodLevel + 50;
             if (foodData.foodLevel > 100)
                 foodData.foodLevel = 100;
+
+            PlayerPrefs.SetFloat("foodLevel", foodData.foodLevel);
         }
     }
 

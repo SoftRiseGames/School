@@ -23,6 +23,19 @@ public class WaterFill : MonoBehaviour
     {
         // Get the SpriteRenderer component
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        if (PlayerPrefs.HasKey("waterLevel"))
+            waterLevel = PlayerPrefs.GetFloat("waterLevel");
+        else
+            waterLevel = 0;
+
+        waterLevel = Mathf.Clamp(waterLevel, 0f, 100f);
+
+        // Calculate the target y-position based on the water level
+        float targetY = Mathf.Lerp(minYRelative, maxYRelative, waterLevel / 100f);
+
+        // Set the position directly without any interpolation
+        transform.localPosition = new Vector3(transform.localPosition.x, targetY, transform.localPosition.z);
     }
 
     void Update()

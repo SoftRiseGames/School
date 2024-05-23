@@ -6,7 +6,7 @@ public class FoodFill : MonoBehaviour
 {
     public Sprite[] foodSprites; // Array to hold your 4 sprites
     public AudioClip[] foodAudioClips; // Array to hold your 4 audio clips
-    public float foodLevel = 100f; // Initial value for food
+    public float foodLevel = 0; // Initial value for food
 
     private SpriteRenderer spriteRenderer;
     private AudioSource audioSource;
@@ -15,7 +15,14 @@ public class FoodFill : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         audioSource = GetComponent<AudioSource>();
-        UpdateFoodLevelSprite();
+        //UpdateFoodLevelSprite();
+
+        if (PlayerPrefs.HasKey("foodLevel"))
+            foodLevel = PlayerPrefs.GetFloat("foodLevel");
+        else
+            foodLevel = 0;
+
+        
     }
 
     void Update()
