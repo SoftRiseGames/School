@@ -50,7 +50,6 @@ public class DayManager : MonoBehaviour
 
     }
 
-
     async void CloseEventManage()
     {
         audios.GetComponent<AudioSource>().clip = audios.GetComponent<AudioVoices>().AudioList[0];
@@ -61,7 +60,6 @@ public class DayManager : MonoBehaviour
    
     private void Update()
     {
-        
         Car.transform.DOMoveX(0.9928551f, .5f).OnComplete(() => { AnimalAcceptButton.gameObject.SetActive(true); });
     }
 
