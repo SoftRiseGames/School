@@ -40,3 +40,4 @@ public class RandomManager : MonoBehaviour
     public List<animalData> animalData;
     public List<NameSurname> nameAndSurname;
 }
+

@@ -15,9 +15,11 @@ public class TutorialNextStepScripts : MonoBehaviour
     [SerializeField] GameObject AdoptationButton;
 
     // Update is called once per frame
-    
+
     void Update()
     {
+        
+        /*
         
         if (PlayerPrefs.HasKey("humanchecktrue"))
         {
@@ -44,6 +46,8 @@ public class TutorialNextStepScripts : MonoBehaviour
         else
             animalaccept.color = Color.white;
 
-
+     */
     }
+        
+    
 }
