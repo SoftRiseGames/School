@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: yem1
   m_EditorClassIdentifier: 
   marketname: Su
-  price: 30
+  price: 10
   sprite: {fileID: 21300000, guid: 778232fa7d4f08c4cbe58eb5eacaa399, type: 3}
