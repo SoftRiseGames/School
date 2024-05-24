@@ -43,11 +43,21 @@ public class DayManager : MonoBehaviour
 
     void AfternoonEventManage()
     {
+        float targetY = -5;
 
+        sky.transform.DOMoveY(targetY, 20f).OnComplete(() =>
+        {
+            Clock.AfternoonEvent -= AfternoonEventManage;
+        });
     }
     void NightEventManage()
     {
+        float targetY = -20;
 
+        sky.transform.DOMoveY(targetY, 20f).OnComplete(() =>
+        {
+            Clock.NightEvent -= NightEventManage;
+        });
     }
 
     async void CloseEventManage()
