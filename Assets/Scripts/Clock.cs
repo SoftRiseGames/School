@@ -21,6 +21,8 @@ public class Clock : MonoBehaviour
     int firstCarCome;
     int secondCarCome;
 
+    bool isfirstCarCome;
+    bool isSecondCarCome;
     private void Start()
     {
         if (PlayerPrefs.HasKey("hoursString"))
@@ -98,11 +100,10 @@ public class Clock : MonoBehaviour
 
     void CarEvents()
     {
-        if (int.Parse(hoursString) == firstCarCome || int.Parse(hoursString) == secondCarCome)
+        if ((int.Parse(hoursString) == firstCarCome && !isfirstCarCome) || (int.Parse(hoursString) == secondCarCome && !isSecondCarCome))
         {
             CarEvent?.Invoke();
         }
-
     }
     private void Update()
     {

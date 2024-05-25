@@ -16,11 +16,6 @@ public class DayManager : MonoBehaviour
     [SerializeField] GameObject AnimalAcceptButton;
 
    
-
-    private void Start()
-    {
-      
-    }
     private void OnEnable()
     {
         Clock.AfternoonEvent += AfternoonEventManage;
@@ -36,9 +31,12 @@ public class DayManager : MonoBehaviour
         Clock.CarEvent -= CarCome;
     }
 
-    private void CarCome()
+    private async void CarCome()
     {
-        
+        Car.GetComponent<Animator>().SetBool("isCarCome", true);
+        await Task.Delay(500);
+        AnimalAcceptButton.gameObject.SetActive(true);
+
     }
 
     void AfternoonEventManage()
@@ -70,9 +68,7 @@ public class DayManager : MonoBehaviour
 
     }
    
-    private void Update()
-    {
-        Car.transform.DOMoveX(0.9928551f, .5f).OnComplete(() => { AnimalAcceptButton.gameObject.SetActive(true); });
-    }
+
+
 
 }

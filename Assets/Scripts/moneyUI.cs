@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-public class 
-    
-    UI : MonoBehaviour
+public class moneyUI : MonoBehaviour
 {
     public CurrencyData currency;
 
