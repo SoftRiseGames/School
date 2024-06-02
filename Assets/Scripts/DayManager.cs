@@ -13,8 +13,7 @@ public class DayManager : MonoBehaviour
     [SerializeField] GameObject audios;
 
     [SerializeField] GameObject Car;
-    [SerializeField] GameObject AnimalAcceptButton;
-
+   
    
     private void OnEnable()
     {
@@ -34,28 +33,17 @@ public class DayManager : MonoBehaviour
     private async void CarCome()
     {
         Car.GetComponent<Animator>().SetBool("isCarCome", true);
-        await Task.Delay(500);
-        AnimalAcceptButton.gameObject.SetActive(true);
-
+        await Task.Delay(10000);
+        Car.GetComponent<Animator>().SetBool("isCarGo", true);
     }
 
     void AfternoonEventManage()
     {
-        float targetY = -5;
-
-        sky.transform.DOMoveY(targetY, 20f).OnComplete(() =>
-        {
-            Clock.AfternoonEvent -= AfternoonEventManage;
-        });
+        sky.transform.DOMoveY(-5f, 20f);
     }
     void NightEventManage()
     {
-        float targetY = -20;
-
-        sky.transform.DOMoveY(targetY, 20f).OnComplete(() =>
-        {
-            Clock.NightEvent -= NightEventManage;
-        });
+        sky.transform.DOMoveY(-20f, 20f);
     }
 
     async void CloseEventManage()

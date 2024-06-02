@@ -21,8 +21,8 @@ public class Clock : MonoBehaviour
     int firstCarCome;
     int secondCarCome;
 
-    bool isfirstCarCome;
-    bool isSecondCarCome;
+    int isFirstCarCome;
+    int isSecondCarCome;
     private void Start()
     {
         if (PlayerPrefs.HasKey("hoursString"))
@@ -36,7 +36,6 @@ public class Clock : MonoBehaviour
         }
 
 
-
         if (PlayerPrefs.HasKey("minutesString"))
         {
             startMinute = PlayerPrefs.GetInt("minutesString");
@@ -46,11 +45,24 @@ public class Clock : MonoBehaviour
         {
             startMinute = 00;
         }
-           
 
 
         firstCarCome = UnityEngine.Random.Range(10, 12);
         secondCarCome = UnityEngine.Random.Range(14, 16);
+
+        if (PlayerPrefs.HasKey("isFirstCarCome"))
+            isFirstCarCome = PlayerPrefs.GetInt("isFirstCarCome");
+        else if (!PlayerPrefs.HasKey("isFirstCarCome"))
+            isFirstCarCome = 0;
+
+        if (PlayerPrefs.HasKey("isSecondCarCome"))
+            isSecondCarCome = PlayerPrefs.GetInt("isSecondCarCome");
+        else if (!PlayerPrefs.HasKey("isSecondCarCome"))
+            isSecondCarCome = 0;
+
+        Debug.Log(isFirstCarCome);
+        Debug.Log(isSecondCarCome);
+
     }
     private void UpdateClockText()
     {
@@ -100,10 +112,20 @@ public class Clock : MonoBehaviour
 
     void CarEvents()
     {
-        if ((int.Parse(hoursString) == firstCarCome && !isfirstCarCome) || (int.Parse(hoursString) == secondCarCome && !isSecondCarCome))
+        if ((int.Parse(hoursString) == firstCarCome && isFirstCarCome == 0))
         {
+            
+            isFirstCarCome = 1;
+            PlayerPrefs.SetInt("isFirstCarCome", isFirstCarCome);
             CarEvent?.Invoke();
         }
+        else if((int.Parse(hoursString) == secondCarCome && isSecondCarCome == 0))
+        {
+            isSecondCarCome = 1;
+            PlayerPrefs.SetInt("isSecondCarCome", isSecondCarCome);
+            CarEvent?.Invoke();
+        }
+        
     }
     private void Update()
     {
