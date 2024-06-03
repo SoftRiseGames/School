@@ -3,17 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-public class AnimalHungryAndThirstyValues : MonoBehaviour
+public class AnimalHungryThirstyAndIllValues : MonoBehaviour
 {
     public int HungryValue;
     public int ThirstyValue;
+    public int isIll;
     [SerializeField] TextMeshProUGUI hungrytext;
     [SerializeField] TextMeshProUGUI thirstytext;
     
     [SerializeField] FoodFill foodData;
     [SerializeField] WaterFill waterData;
+    [SerializeField] CureFill CureData;
 
-    int foodchecktrue = 0;
+
     void Start()
     {
         if (PlayerPrefs.HasKey("HungryValue"+this.gameObject.name))
@@ -47,8 +49,6 @@ public class AnimalHungryAndThirstyValues : MonoBehaviour
             if (HungryValue < 0)
                 HungryValue = 0;
 
-            foodchecktrue = 1;
-            PlayerPrefs.SetInt("foodchecktrue", foodchecktrue);
             PlayerPrefs.SetInt("HungryValue" + this.gameObject.name, HungryValue);
         }
         
@@ -66,14 +66,24 @@ public class AnimalHungryAndThirstyValues : MonoBehaviour
 
             if (ThirstyValue < 0)
                 ThirstyValue = 0;
-            foodchecktrue = 1;
-            PlayerPrefs.SetInt("foodchecktrue", foodchecktrue);
+           
             PlayerPrefs.SetInt("ThirstyValue" + this.gameObject.name, ThirstyValue);
         }
 
         
     }
-    // Update is called once per frame
+
+    public void IllControl()
+    {
+        if (isIll == 1 && CureData.CureData >= 20)
+        {
+            isIll = 0;
+            CureData.CureData = CureData.CureData - 1;
+           
+            PlayerPrefs.SetInt("IllValue" + this.gameObject.name, isIll);
+        }
+    }
+  
 
     void TextControl()
     {

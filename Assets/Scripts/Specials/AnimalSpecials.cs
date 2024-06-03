@@ -12,11 +12,10 @@ public class AnimalData
     public int eyes;
     public int body;
     //
-    /*
-    public int hungryVariable;
-    public int thirstyVariable;
-    */
+    
+   
     public bool isIll;
+    
     
     //personality kýsýmlarý için ayarlý yer
     public int personality;

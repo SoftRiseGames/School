@@ -76,7 +76,6 @@ public class AnimalAdoptationSettings : MonoBehaviour
         catch (Exception ex)
         {
             Debug.Log($"Error: {ex.Message}");
-          
         }
     }
 }

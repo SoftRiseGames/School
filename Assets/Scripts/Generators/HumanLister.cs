@@ -137,6 +137,8 @@ public class HumanLister : MonoBehaviour
                 Debug.Log("kotu eslesme");
                 totalCounter -= 20;
             }
+
+            Debug.Log(PlayerPrefs.GetInt("HungeryValue" + collision.gameObject.name));
             totalCounterText.gameObject.SetActive(true);
             totalCounterText.text = totalCounter.ToString();
 

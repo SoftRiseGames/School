@@ -13,6 +13,7 @@ public class AnimalDataCheck : MonoBehaviour
     [SerializeField] GameObject body;
     [SerializeField] GameObject eyes;
     [SerializeField] GameObject nose;
+    public bool isIll;
     private void Start()
     {
         if (animalData.personality == 1)
@@ -26,6 +27,13 @@ public class AnimalDataCheck : MonoBehaviour
             evcillik.text = "Ev hayvaný";
         else if (animalData.hobbies == 2)
             evcillik.text = "Dýþarý hayvaný";
+
+
+        if (animalData.isIll)
+            gameObject.GetComponent<AnimalHungryThirstyAndIllValues>().isIll = 1;
+        else
+            gameObject.GetComponent<AnimalHungryThirstyAndIllValues>().isIll = 0;
+
 
         DataChecker();
         
