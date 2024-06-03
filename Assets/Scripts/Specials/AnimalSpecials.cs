@@ -12,10 +12,12 @@ public class AnimalData
     public int eyes;
     public int body;
     //
+    /*
     public int hungryVariable;
     public int thirstyVariable;
+    */
     public bool isIll;
-
+    
     //personality kýsýmlarý için ayarlý yer
     public int personality;
     public int hobbies;
@@ -80,17 +82,7 @@ public class AnimalSpecials : MonoBehaviour
         int HungryRandomize = Random.Range(1, 101);
         int ThirstyRandomize = Random.Range(1, 101);
         int illRandomize = Random.Range(1, 101);
-
-        if (HungryRandomize < ChanceToHungrySpeed)
-           animalclasses.hungryVariable = 2;
-        else
-           animalclasses.hungryVariable = 1;
-
-        if (ThirstyRandomize < ChanceToThirstySpeed)
-            animalclasses.thirstyVariable = 2;
-        else
-           animalclasses.thirstyVariable = 1;
-
+       
         if (illRandomize < ChanceToIll)
            animalclasses.isIll = true;
         else
