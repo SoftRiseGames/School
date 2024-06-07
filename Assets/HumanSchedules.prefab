@@ -136,9 +136,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3885395460927375414}
         m_TargetAssemblyTypeName: HumanSpecials, Assembly-CSharp
         m_MethodName: OpenPanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3885395460927375414}
+        m_TargetAssemblyTypeName: HumanSpecials, Assembly-CSharp
+        m_MethodName: interact
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -161,7 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   randomizerList: {fileID: 0}
-  Panels: {fileID: 8025121559842320802, guid: 1216c87bdd038734fb77ec796c277c3b, type: 3}
+  Panels: {fileID: 8321477518658299604, guid: 643ec60d32faa4344a40f34786b29d71, type: 3}
   indexcounter: 0
   personalityText: {fileID: 3885395460927375402}
   face: {fileID: 0}

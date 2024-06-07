@@ -62,6 +62,7 @@ public class HumanSpecials : MonoBehaviour
         human.HumanType = Random.Range(0, randomizerList.humanData.Count);
         WaveSystem(randomizerList.humanData[human.HumanType]);
         iconMaker(randomizerList.humanData[human.HumanType]);
+        SpecialsTextManager();
     }
     private void Update()
     {
@@ -97,5 +98,9 @@ public class HumanSpecials : MonoBehaviour
         PlayerPrefs.SetInt("humanchecktrue", humanchecktrue);
         PlayerPrefs.SetInt("humanCount", indexcounter);
         File.WriteAllText(Application.dataPath + "/JsonHumanFolder/jsondata" + indexcounter.ToString() + ".json", sprite);
+    }
+    public void interact()
+    {
+        gameObject.GetComponent<Button>().interactable = false;
     }
 }
