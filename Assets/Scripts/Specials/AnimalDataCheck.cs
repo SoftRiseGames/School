@@ -10,6 +10,7 @@ public class AnimalDataCheck : MonoBehaviour
     [SerializeField] RandomManager RandomManager;
     [SerializeField] TextMeshProUGUI kisilik;
     [SerializeField] TextMeshProUGUI evcillik;
+   
     [SerializeField] GameObject body;
     [SerializeField] GameObject eyes;
     [SerializeField] GameObject nose;
