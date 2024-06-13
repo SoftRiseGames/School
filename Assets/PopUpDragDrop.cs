@@ -8,7 +8,7 @@ public class PopUpDragDrop : MonoBehaviour
     private Vector3 offset;
     private void Start()
     {
-        gameObject.transform.parent = GameObject.Find("Limits").transform.GetChild(0);
+        gameObject.transform.parent = GameObject.Find("HumanPanelLimits").transform.GetChild(0);
     }
     private void OnMouseDown()
     {
