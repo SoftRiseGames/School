@@ -29,7 +29,9 @@ public class HumanSpecials : MonoBehaviour
     public RandomManager randomizerList;
     //public GameObject Panels;
     public int indexcounter;
-    public TextMeshProUGUI personalityText;
+    [SerializeField] TextMeshProUGUI ageText;
+    [SerializeField] TextMeshProUGUI personalityText;
+    [SerializeField] TextMeshProUGUI hobbyText;
     [SerializeField] Sprite face;
     int humanchecktrue = 0;
 
@@ -69,10 +71,21 @@ public class HumanSpecials : MonoBehaviour
     void SpecialsTextManager()
     {
         if(human.HumanType == 0 || human.HumanType == 1)
-            personalityText.text = "kiþi " + Random.Range(19, 29).ToString() + " yaþýnda";
+            ageText.text = "kiþi " + Random.Range(19, 29).ToString() + " yaþýnda";
         else if(human.HumanType == 2 || human.HumanType == 3)
-            personalityText.text = "kiþi " + Random.Range(30, 50).ToString() + " yaþýnda";
+            ageText.text = "kiþi " + Random.Range(30, 50).ToString() + " yaþýnda";
 
+        if (human.personality == 1)
+            personalityText.text = "kiþi falasýyla enerjik";
+        else if (human.personality == 2)
+            personalityText.text = "kiþi arada dýþarý çýkar";
+        else if (human.personality == 3)
+            personalityText.text = "kiþi asosyal";
+
+        if (human.hobbies == 1)
+            hobbyText.text = "kiþi ev insaný";
+        else if(human.hobbies == 2)
+            hobbyText.text = "kiþi dýþarý insaný";
 
     }
    

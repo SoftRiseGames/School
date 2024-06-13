@@ -11,7 +11,7 @@ public enum CurrencyType
 [CreateAssetMenu(menuName ="Scrýptable Objects/Currency Data/Currency")]
 public class CurrencyData :ScriptableObject
 {
-    public UnityEvent OnAmountChanged;
+   
     public CurrencyType type;
 
  
@@ -21,7 +21,6 @@ public class CurrencyData :ScriptableObject
         set
         {
             _amount = Mathf.Max(0, value);
-            OnAmountChanged?.Invoke();
         }
     }
     [SerializeField] int _amount;
