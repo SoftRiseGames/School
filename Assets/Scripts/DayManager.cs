@@ -48,7 +48,8 @@ public class DayManager : MonoBehaviour
 
     async void CloseEventManage()
     {
-        audios.GetComponent<AudioSource>().clip = audios.GetComponent<AudioVoices>().AudioList[0];
+        //audios.GetComponent<AudioSource>().clip = audios.GetComponent<AudioVoices>().AudioList[0];
+        Clock.CloseEvent -= CloseEventManage;
         await Task.Delay(100);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         PlayerPrefs.DeleteKey("hoursString");

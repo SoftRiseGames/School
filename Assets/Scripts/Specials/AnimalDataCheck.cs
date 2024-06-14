@@ -30,11 +30,6 @@ public class AnimalDataCheck : MonoBehaviour
             evcillik.text = "Dýþarý hayvaný";
 
 
-        if (animalData.isIll)
-            gameObject.GetComponent<AnimalHungryThirstyAndIllValues>().isIll = 1;
-        else
-            gameObject.GetComponent<AnimalHungryThirstyAndIllValues>().isIll = 0;
-
 
         DataChecker();
         

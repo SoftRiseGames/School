@@ -10,15 +10,16 @@ public class SceneControl : MonoBehaviour
     
     public void animalAccept()
     {
-        PlayerPrefs.SetInt("isCarSkipped", isCarSkipped); 
+        PlayerPrefs.SetInt("isCarSkipped", isCarSkipped);
         SceneManager.LoadScene(2);
-   
-        
-        
     }
     public void BackMain()
     {
         SceneManager.LoadScene(0);
+    }
+    public void GoToEnd()
+    {
+        SceneManager.LoadScene(3);
     }
     public void Adoptation()
     {

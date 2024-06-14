@@ -8,6 +8,7 @@ public class EndGameDatas : MonoBehaviour
     [SerializeField] Toggle Gider;
     [SerializeField] Toggle Vergi;
     [SerializeField] Toggle Aile;
+    
     private void Update()
     {
         if (moneyCurrency.Amount >= 100)
